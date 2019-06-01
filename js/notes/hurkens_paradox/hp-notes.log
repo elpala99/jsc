@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.30)  30 MAY 2019 21:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2019.5.31)  31 MAY 2019 11:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **hp-notes.tex
 (./hp-notes.tex
 LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 7 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 84 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size11.clo
@@ -43,8 +43,6 @@ File: babel.def 2018/02/14 3.18 Babel common definitions
 (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@dirlevel=\count88
 )
-\l@british = a dialect from \language\l@english 
-\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
@@ -432,21 +430,9 @@ Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¡ in font cmr12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no ¡ in font cmr12!
-
-
-! LaTeX Error: \mathcal allowed only in math mode.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 ... infinite set of variables called \mathcal
-                                                  {Var}. The, we define the ...
-
-? q
-OK, entering \batchmode...
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 26.
- (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
@@ -459,23 +445,17 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 28.
  (./hp-notes.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 28.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 28.
-
-Package rerunfilecheck Warning: File `hp-notes.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `hp-notes.out':
-(rerunfilecheck)             Before: D41D8CD98F00B204E9800998ECF8427E;0
-(rerunfilecheck)             After:  179702200A0FDF135DCDA9093334C796;58.
+Package rerunfilecheck Info: File `hp-notes.out' has not changed.
+(rerunfilecheck)             Checksum: 179702200A0FDF135DCDA9093334C796;58.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 28.
  ) 
 Here is how much of TeX's memory you used:
- 6731 strings out of 494847
- 97422 string characters out of 6179080
- 195253 words of memory out of 5000000
- 9987 multiletter control sequences out of 15000+600000
+ 6730 strings out of 492982
+ 97398 string characters out of 6134896
+ 199939 words of memory out of 5000000
+ 10227 multiletter control sequences out of 15000+600000
  9094 words of font info for 33 fonts, out of 8000000 for 9000
- 59 hyphenation exceptions out of 8191
+ 1141 hyphenation exceptions out of 8191
  28i,6n,28p,223b,334s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/shar
@@ -483,10 +463,10 @@ e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texm
 f-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/
 fonts/type1/public/amsfonts/cm/cmsy10.pfb>
-Output written on hp-notes.pdf (1 page, 62779 bytes).
+Output written on hp-notes.pdf (1 page, 62653 bytes).
 PDF statistics:
- 38 PDF objects out of 1000 (max. 8388607)
- 28 compressed objects within 1 object stream
+ 42 PDF objects out of 1000 (max. 8388607)
+ 32 compressed objects within 1 object stream
  3 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 9 words of extra memory for PDF output out of 10000 (max. 10000000)
 

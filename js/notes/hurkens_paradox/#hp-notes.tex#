@@ -33,8 +33,8 @@ We suppose an infinite set of variables called $\mathcal{VAR}$. The, we define t
 A term like $\lambda x.M$ represents a function which has an input $x$ and returns an output $M$. Now, it is called a free variable of a lambda term $M$ if it is not ``cuantified'' by $\lambda$. It happens that:
 
 \begin{itemize}
-\item If a lambda-term contains no free variables it is called a \textbf{combinator}.
-\item If there are two lambda-terms and one can be renamed all the bound variables to obtain the other one, it is said that the two lambda-terms are equal.
+    \item If a lambda-term contains no free variables it is called a \textbf{combinator}.
+     \item If there are two lambda-terms and one can be renamed all the bound variables to obtain the other one, it is said that the two lambda-terms are equal.
 \end{itemize}
 
 \end{document}
