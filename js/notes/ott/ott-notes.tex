@@ -1,0 +1,49 @@
+\documentclass[11pt]{article}
+\usepackage[british]{babel}
+\usepackage{geometry}
+% The amsmath package must be before the unicode-math package.
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{multicol}
+\usepackage{graphicx}
+\usepackage{hyperref}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Title
+
+\title{Ordinals in Type Theory Notes}
+\author{Juan Sebastián Cárdenas}
+\date{\today}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\maketitle
+\section{Some important definitions}
+
+\begin{definition}
+  A element $x$ of a set $A$ ordered by the relationship $\leq$ is called the least element if it occurs that $(\forall y \in A) x \leq y$
+\end{definition}
+
+\begin{definition}
+  A set is well-ordered by a relationship if the relationship is antisymmetric, transitive, has connexity and, for every non-empty subset there is a least element in the set.
+\end{definition}
+
+\begin{definition}
+  A set $A$ is transitive if it occurs that if $x \in A$ and $y \in x$ then $y \in A$
+\end{definition}
+
+\section{Ordinals}
+In literature it can be found several definitions for ordinals and the way to construct them. The one used here is:
+
+\begin{definition}
+  A set $\alpha$ is an ordinal number iff
+  \begin{itemize}
+  \item The set is transitive
+  \item The set is well-ordered by $\in_A$  
+  \end{itemize}
+\end{definition}
+
+\end{document}

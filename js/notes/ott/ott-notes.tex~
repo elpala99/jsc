@@ -1,5 +1,3 @@
-% -*- ispell-local-dictionary: "british"; -*-
-
 \documentclass[11pt]{article}
 \usepackage[british]{babel}
 \usepackage{geometry}
@@ -13,7 +11,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title
 
-\title{Hurken's paradox notes}
+\title{}
 \author{Juan Sebastián Cárdenas}
 \date{\today}
 
