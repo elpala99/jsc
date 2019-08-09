@@ -1,13 +1,16 @@
 \documentclass[11pt]{article}
 \usepackage[british]{babel}
 \usepackage{geometry}
-% The amsmath package must be before the unicode-math package.
 \usepackage{amsmath}
 \usepackage{amsthm}
-\usepackage{multicol}
 \usepackage{graphicx}
-\usepackage{hyperref}
 
+%%%%%%%% HYPERREF PACKAGE
+\usepackage{hyperref}
+\hypersetup{citecolor=blue}
+\hypersetup{colorlinks=true}
+
+%%%%%%%% DEFINITION AND THEOREM DEFINITIONS
 \theoremstyle{definition}
 \newtheorem{definition}{Definition}[section]
 \theoremstyle{remark}
@@ -15,14 +18,20 @@
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{corollary}{Corollary}[theorem]
 \newtheorem{lemma}[theorem]{Lemma}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Title
+
+%%%%%%%% MULTI-COLUMNS PACKAGE
+\usepackage{multicol}
+
+%%%%%%%% BIB-LATEX STUFF
+\bibliographystyle{IEEEtran}
+
+%%%%%%%% START DOCUMENT
 
 \title{}
 \author{Juan Sebastián Cárdenas}
 \date{\today}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{document}
 \maketitle
 Test
