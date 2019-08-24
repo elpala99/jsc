@@ -1,0 +1,72 @@
+\documentclass{beamer}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+
+%%%%%%%% HYPERREF PACKAGE
+\usepackage{hyperref}
+\hypersetup{citecolor=blue}
+\hypersetup{colorlinks=true}
+
+%%%%%%%% DEFINITION AND THEOREM DEFINITIONS
+\let\definition\relax
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\let\remark\relax
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+%%%%%%%% MULTI-COLUMNS PACKAGE
+\usepackage{multicol}
+
+%%%%%%%% BIB-LATEX STUFF
+\bibliographystyle{IEEEtran}
+
+%%%%%%%% THEME SLIDES
+\usetheme{default}
+
+%%%%%%%% FRAME TITLES AND SUBTITLES
+% https://stackoverflow.com/questions/35810906/vim-beamer-dynamic-frame-title
+\newif\ifinsection
+\newif\ifinsubsection
+
+\let\oldsection\section
+\renewcommand{\section}{%
+  \global\insectiontrue% In section
+  \global\insubsectionfalse% Not in subsection
+  \oldsection}
+\let\oldsubsection\subsection
+\renewcommand{\subsection}{%
+  %\global\insectionfalse% No in section
+  \global\insubsectiontrue% In subsection
+  \oldsubsection}
+
+\newcommand {\myframe}[1] {%
+  \begin{frame}
+  \ifinsection\frametitle{\secname}\fi
+  \ifinsubsection\framesubtitle{\subsecname}\fi
+  #1
+  \end{frame}
+}
+
+%%%%%%%% START DOCUMENT
+\title{}
+
+\author{Juan Sebasti\'an C\'ardenas}
+
+\institute[Universidad EAFIT]{Department of Sciences}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \tableofcontents
+\end{frame}
+
+\end{document}
