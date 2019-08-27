@@ -7,8 +7,8 @@
 
 %%%%%%%% HYPERREF PACKAGE
 \usepackage{hyperref}
-\hypersetup{citecolor=blue}
-\hypersetup{colorlinks=true}
+\let\oldcite=\cite
+\renewcommand\cite[1]{\hypersetup{linkcolor=[rgb]{1.0, 0.75, 0.0}}\hypersetup{colorlinks=true}\hyperlink{#1}{\oldcite{#1}}}
 
 %%%%%%%% DEFINITION AND THEOREM DEFINITIONS
 \let\definition\relax
@@ -29,7 +29,7 @@
 \usetheme{default}
 
 %%%%%%%% FRAME TITLES AND SUBTITLES
-% https://stackoverflow.com/questions/35810906/vim-beamer-dynamic-frame-title
+% https://stackoverflow.com/questions/35810906/vim-beamer-dynamic-frame-title1
 \newif\ifinsection
 \newif\ifinsubsection
 
@@ -44,7 +44,7 @@
   \global\insubsectiontrue% In subsection
   \oldsubsection}
 
-\newcommand {\myframe}[1] {%
+\newcommand {\aframe}[1] {%
   \begin{frame}
   \ifinsection\frametitle{\secname}\fi
   \ifinsubsection\framesubtitle{\subsecname}\fi
@@ -67,6 +67,21 @@
 
 \begin{frame}{Outline}
   \tableofcontents
+\end{frame}
+
+%%%%%%%%%% SLIDES %%%%%%%%%%%%%%%
+\section{First section}
+\subsection{First subsection}
+\aframe{Content for first slide}
+
+\begin{frame}{Not numbered section}
+  \framesubtitle{Not numbered subsection}
+  Content for second slide
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{References}
+  \bibliography{ref.bib}
 \end{frame}
 
 \end{document}
