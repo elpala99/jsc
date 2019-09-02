@@ -4,10 +4,12 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{graphicx}
+\usepackage{caption}
 
 %%%%%%%% HYPERREF PACKAGE
 \hypersetup{colorlinks=true}
 \hypersetup{citecolor=orange}
+\hypersetup{urlcolor=orange}
 
 %%%%%%%% DEFINITION AND THEOREM DEFINITIONS
 \let\definition\relax
@@ -28,6 +30,29 @@
             hyperref=true,
             backend=biber]{biblatex}
 \addbibresource{ref.bib}
+
+%%%%%%%% ICONS FOR CITES
+% https://tex.stackexchange.com/questions/68080/beamer-bibliography-icon
+\setbeamertemplate{bibliography item}{%
+  \ifboolexpr{ test {\ifentrytype{book}} or test {\ifentrytype{mvbook}}
+    or test {\ifentrytype{collection}} or test {\ifentrytype{mvcollection}}
+    or test {\ifentrytype{reference}} or test {\ifentrytype{mvreference}} }
+    {\setbeamertemplate{bibliography item}[book]}
+    {\ifentrytype{online}
+       {\setbeamertemplate{bibliography item}[online]}
+       {\setbeamertemplate{bibliography item}[article]}}%
+  \usebeamertemplate{bibliography item}}
+
+\defbibenvironment{bibliography}
+  {\list{}
+     {\settowidth{\labelwidth}{\usebeamertemplate{bibliography item}}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{\biblabelsep}%
+      \addtolength{\leftmargin}{\labelsep}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}}}
+  {\endlist}
+  {\item}
 
 %%%%%%%% BRACKETS AROUND CITE
 % https://tex.stackexchange.com/questions/16765/biblatex-author-year-square-brackets
@@ -81,6 +106,13 @@
 \setbeamertemplate{section in toc}[sections numbered]
 \setbeamertemplate{subsection in toc}[subsections numbered]
 
+%%%%%%%% FOOTNOTE STUFF
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+%%%%%%%% CENTER OF SLIDE THANK YOU
+\usepackage{tikz}
+
+
 %%%%%%%% START DOCUMENT
 \title{Title here}
 
@@ -122,5 +154,27 @@
 
 \section{References}
 \aframe{\printbibliography}
+
+\begin{frame}
+  \begin{tikzpicture}[overlay, remember picture]
+     \node[anchor=center] at (current page.center) {
+     \Huge{\emph{Thank you}}};
+\end{tikzpicture}
+  \begin{minipage}[t][.8\textheight]{\textwidth}
+    \vfill
+    \begin{center}
+          \begin{multicols}{2}
+            \scalebox{0.7}{\textbf{Student Contact}} \\
+            \scalebox{0.7}{Juan Sebasti\'an C\'ardenas} \\
+            \scalebox{0.7}{jscardenar@eafit.edu.co} \\
+
+            \columnbreak
+            \scalebox{0.7}{\textbf{Tutor Contact}} \\
+            \scalebox{0.7}{Andr\'es Sicard-Ram\'irez} \\
+            \scalebox{0.7}{asr@eafit.edu.co}
+    \end{multicols}
+    \end{center}
+  \end{minipage}
+\end{frame}
 
 \end{document}
