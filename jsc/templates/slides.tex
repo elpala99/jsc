@@ -1,0 +1,185 @@
+\documentclass{beamer}
+\usepackage[english]{babel}
+\usepackage{geometry}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{graphicx}
+\usepackage{caption}
+
+%%%%%%%% HYPERREF PACKAGE
+\hypersetup{colorlinks=true}
+\hypersetup{citecolor=orange}
+\hypersetup{urlcolor=orange}
+
+%%%%%%%% DEFINITION AND THEOREM DEFINITIONS
+\let\definition\relax
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\let\remark\relax
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}
+
+\let\remark\relax
+\theoremstyle{example}
+\newtheorem{question}{Question}
+
+%%%%%%%% MULTI-COLUMNS PACKAGE
+\usepackage{multicol}
+
+%%%%%%%% BIB-LATEX STUFF
+\usepackage[style=authoryear,
+            bibstyle=authoryear,
+            citestyle=authoryear,
+            hyperref=true,
+            backend=biber]{biblatex}
+\addbibresource{ref.bib}
+
+%%%%%%%% ICONS FOR CITES
+% https://tex.stackexchange.com/questions/68080/beamer-bibliography-icon
+\setbeamertemplate{bibliography item}{%
+  \ifboolexpr{ test {\ifentrytype{book}} or test {\ifentrytype{mvbook}}
+    or test {\ifentrytype{collection}} or test {\ifentrytype{mvcollection}}
+    or test {\ifentrytype{reference}} or test {\ifentrytype{mvreference}} }
+    {\setbeamertemplate{bibliography item}[book]}
+    {\ifentrytype{online}
+       {\setbeamertemplate{bibliography item}[online]}
+       {\setbeamertemplate{bibliography item}[article]}}%
+  \usebeamertemplate{bibliography item}}
+
+\defbibenvironment{bibliography}
+  {\list{}
+     {\settowidth{\labelwidth}{\usebeamertemplate{bibliography item}}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{\biblabelsep}%
+      \addtolength{\leftmargin}{\labelsep}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}}}
+  {\endlist}
+  {\item}
+
+%%%%%%%% BRACKETS AROUND CITE
+% https://tex.stackexchange.com/questions/16765/biblatex-author-year-square-brackets
+\makeatletter
+
+\newrobustcmd*{\parentexttrack}[1]{%
+  \begingroup
+  \blx@blxinit
+  \blx@setsfcodes
+  \blx@bibopenparen#1\blx@bibcloseparen
+  \endgroup}
+
+\AtEveryCite{%
+  \let\parentext=\parentexttrack%
+  \let\bibopenparen=\bibopenbracket%
+  \let\bibcloseparen=\bibclosebracket}
+
+\makeatother
+
+%%%%%%%% THEME SLIDES
+\usetheme{default}
+
+
+%%%%%%%% FRAME TITLES AND SUBTITLES
+% https://stackoverflow.com/questions/35810906/vim-beamer-dynamic-frame-title1
+\newif\ifinsection
+\newif\ifinsubsection
+
+\let\oldsection\section
+\renewcommand{\section}{%
+  \global\insectiontrue% In section
+  \global\insubsectionfalse% Not in subsection
+  \oldsection}
+\let\oldsubsection\subsection
+\renewcommand{\subsection}{%
+  %\global\insectionfalse% No in section
+  \global\insubsectiontrue% In subsection
+  \oldsubsection}
+
+\newcommand {\aframe}[1] {%
+  \begin{frame}
+    \ifinsection\frametitle{\secname}\fi
+    \ifinsubsection\framesubtitle{\subsecname}\fi
+  #1
+  \end{frame}
+}
+
+
+%%%%%%%% BEAMER STUFF
+\setbeamertemplate{footline}[frame number]
+\setbeamertemplate{section in toc}[sections numbered]
+\setbeamertemplate{subsection in toc}[subsections numbered]
+\setbeamertemplate{navigation symbols}{}
+
+%%%%%%%% FOOTNOTE STUFF
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+
+%%%%%%%% CENTER OF SLIDE THANK YOU
+\usepackage{tikz}
+
+
+%%%%%%%% START DOCUMENT
+\title{Title here}
+
+\author{Juan Sebasti\'an C\'ardenas}
+
+\institute[Universidad EAFIT]{Department of Sciences}
+
+\begin{document}
+
+% Plain so is not numbered
+\begin{frame}[plain]
+  \titlepage
+\end{frame}
+
+\begin{frame}{Outline}
+  \hypersetup{linkcolor=black}
+  \tableofcontents
+\end{frame}
+
+%%%%%%%%%% SLIDES %%%%%%%%%%%%%%%
+\section{First section}
+\subsection{First subsection}
+\aframe{Content for first slide
+  \begin{example}
+    Example here
+  \end{example}
+  \begin{remark}
+    Remark here\footnote{Footnote here}
+  \end{remark}
+}
+
+\section*{Not numbered section}
+\subsection*{Not numbered subsection}
+\aframe{
+  \begin{definition}
+    Definition by \parencite{set1999}
+  \end{definition}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{References}
+\aframe{\printbibliography}
+
+\begin{frame}
+  \begin{tikzpicture}[overlay, remember picture]
+     \node[anchor=center] at (current page.center) {
+     \Huge{\emph{Thank you}}};
+\end{tikzpicture}
+  \begin{minipage}[t][.8\textheight]{\textwidth}
+    \vfill
+    \begin{center}
+          \begin{multicols}{2}
+            \scalebox{0.7}{\textbf{Student Contact}} \\
+            \scalebox{0.7}{Juan Sebasti\'an C\'ardenas} \\
+            \scalebox{0.7}{jscardenar@eafit.edu.co} \\
+
+            \columnbreak
+            \scalebox{0.7}{\textbf{Tutor Contact}} \\
+            \scalebox{0.7}{Andr\'es Sicard-Ram\'irez} \\
+            \scalebox{0.7}{asr@eafit.edu.co}
+    \end{multicols}
+    \end{center}
+  \end{minipage}
+\end{frame}
+
+\end{document}
