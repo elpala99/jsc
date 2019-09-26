@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{graphicx}
+\usepackage[utf8]{inputenc}
 
 %%%%%%%% HYPERREF PACKAGE
 \usepackage{hyperref}
@@ -25,7 +26,12 @@
 \usepackage{multicol}
 
 %%%%%%%% BIB-LATEX STUFF
-\bibliographystyle{IEEEtran}
+\usepackage[style=iee,
+            bibstyle=iee,
+            citestyle=iee,
+            hyperref=true,
+            backend=biber]{biblatex}
+\addbibresource{ref.bib} %Put relative path to ref
 
 %%%%%%%% START DOCUMENT
 
@@ -37,5 +43,5 @@
 \begin{document}
 \maketitle
 
-\bibliograhy{ref.bib}
+\printbibliography
 \end{document}
