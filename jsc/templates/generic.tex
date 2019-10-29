@@ -1,5 +1,5 @@
 \documentclass[11pt]{article}
-\usepackage[british]{babel}
+\usepackage[english]{babel}
 \usepackage{geometry}
 \usepackage{amsmath}
 \usepackage{amsthm}
@@ -8,6 +8,7 @@
 
 %%%%%%%% HYPERREF PACKAGE
 \usepackage{hyperref}
+\hypersetup{linkcolor=blue}
 \hypersetup{citecolor=blue}
 \hypersetup{urlcolor=blue}
 \hypersetup{colorlinks=true}
@@ -22,16 +23,29 @@
 \theoremstyle{remark}
 \newtheorem{question}{Question}
 
+\newtheorem{theorem}{Theorem}[section]
+
 %%%%%%%% MULTI-COLUMNS PACKAGE
 \usepackage{multicol}
 
 %%%%%%%% BIB-LATEX STUFF
-\usepackage[style=iee,
-            bibstyle=iee,
-            citestyle=iee,
+\usepackage[style=numeric,
+            bibstyle=numeric,
+            citestyle=numeric,
             hyperref=true,
             backend=biber]{biblatex}
 \addbibresource{ref.bib} %Put relative path to ref
+
+%%%%%%%% SETS DEFINITIONS
+\usepackage{amssymb}
+\newcommand{\O}{\mathbb{O}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\R}{{\mathbb{R}}}
+
+\newcommand{\ri}{\rightarrow}
+\newcommand{\fOrd}{\O \ri \O}
 
 %%%%%%%% START DOCUMENT
 
