@@ -101,9 +101,7 @@ COSMETHIC:
 1. Theme
   | Install lxappeareance (0.6.3)
   | Select desired theme.
-2. Name of workspace:
-  | Install i3ipc with pip.
-  | Install fontawesome with pip
+2. Load images at Pictures.
 
 APPS:
 1. VLC with snap (vlc 3.0.7)
@@ -119,3 +117,20 @@ APPS:
   | Put it in /opt/
   | Add to path.
   | Create desktop.
+4. Remmina (Remote Desktop) (1.2.0)
+  | sudo apt-get install remmina remmina-plugin-*
+5. Libreoffice
+  | Installed with snap.
+6. Install arandr.
+  | Install with apt.
+
+PACKAGES:
+1. Install xrandr (7.7) :
+  | sudo apt-get install x11-xserver-utils
+2. Install wine (4.17)
+  * flex with apt (2.6.4)
+  * bison wuth apt (2.3.0)
+  | Download tar from Wine.
+  | ./configure --enable-win64
+  | make
+  | sudo make install
