@@ -33,7 +33,7 @@
             citestyle=authoryear,
             hyperref=true,
             backend=biber]{biblatex}
-\addbibresource{ref.bib} %Put relative path to ref
+\addbibresource{../../bib/ref.bib}
 
 %%%%%%%% ICONS FOR CITES
 % https://tex.stackexchange.com/questions/68080/beamer-bibliography-icon
@@ -110,14 +110,36 @@
 \setbeamertemplate{section in toc}[sections numbered]
 \setbeamertemplate{subsection in toc}[subsections numbered]
 \setbeamertemplate{navigation symbols}{}
-\setbeamertemplate{itemize items}[circle]
+
+% Not enumerate frame breaks
+% https://tex.stackexchange.com/questions/295854/how-to-edit-behaviour-of-frame-titles-during-frame-break-in-beamer
+\setbeamertemplate{frametitle continuation}[from second][]
+
 
 %%%%%%%% FOOTNOTE STUFF
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+% Footnote without symbol
+% https://tex.stackexchange.com/questions/30720/footnote-without-a-marker
+\newcommand\blfootnote[1]{%
+  \begingroup
+  \renewcommand\thefootnote{}\footnote{#1}%
+  \addtocounter{footnote}{-1}%
+  \endgroup
+}
 
 %%%%%%%% CENTER OF SLIDE THANK YOU
 \usepackage{tikz}
 
+%%%%%%%% SETS DEFINITIONS
+\usepackage{amssymb}
+\renewcommand{\O}{\mathbb{O}}
+\newcommand{\N}{\mathbb{N}}
+\newcommand{\Z}{{\mathbb{Z}}}
+\newcommand{\Q}{{\mathbb{Q}}}
+\newcommand{\R}{{\mathbb{R}}}
+
+\newcommand{\ri}{\rightarrow}
+\newcommand{\fOrd}{\O \ri \O}
 
 %%%%%%%% START DOCUMENT
 \title{Title here}
@@ -154,6 +176,7 @@
   \begin{definition}
     Definition by \parencite{set1999}
   \end{definition}}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[allowframebreaks]{References}
   \printbibliography
@@ -162,7 +185,7 @@
 \begin{frame}
   \begin{tikzpicture}[overlay, remember picture]
      \node[anchor=center] at (current page.center) {
-     \Huge{\emph{Thank you}}};
+     \Huge{\emph{Thank you!}}};
 \end{tikzpicture}
   \begin{minipage}[t][.8\textheight]{\textwidth}
     \vfill
