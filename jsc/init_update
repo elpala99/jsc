@@ -58,6 +58,10 @@ I3 RELATED STUFF:
   * sudo cp betterlockscreen /usr/local/bin
 5. Install i3blocks with apt (1.4.4).
 6. Install compton with apt (0.1)
+7. Install R-studio (1.2.5019)
+  | Install deb from web.
+  | sudo dpkg --ignore-depends=libclang-dev -i rstudio-1.2.5019-amd64.deb
+  | sudo apt-get install -f
 
 Packages:
 1. Install Python (3.7.4)
