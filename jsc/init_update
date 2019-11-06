@@ -58,6 +58,7 @@ I3 RELATED STUFF:
   * sudo cp betterlockscreen /usr/local/bin
 5. Install i3blocks with apt (1.4.4).
 6. Install compton with apt (0.1)
+
 Packages:
 1. Install Python (3.7.4)
   * sudo apt-get install
@@ -95,7 +96,10 @@ Packages:
   | cabal install Agda
   | agda-mode setup
 5. Install git with apt.
-
+6. Install R (3.6.1)
+  * gfortran
+  * libcurl4-openssl-dev
+  | Download tar ball from R webpage.
 ################### ADD ONS AND COSMETHIC ########################
 COSMETHIC:
 1. Theme
