@@ -104,6 +104,9 @@ Packages:
   * gfortran
   * libcurl4-openssl-dev
   | Download tar ball from R webpage.
+  | ./configure --enable-R-shlib
+  | sudo make
+  | sudo make install
 ################### ADD ONS AND COSMETHIC ########################
 COSMETHIC:
 1. Theme
