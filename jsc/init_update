@@ -57,11 +57,11 @@ I3 RELATED STUFF:
   * libxcb-image0-dev
   * libxkbcommon-dev
   * libxkbcommon-x11-dev
-  * libpam-cracklib 
-  * libpam-doc 
-  * libpam-modules 
-  * libpam-modules-bin 
-  * libpam-runtime 
+  * libpam-cracklib
+  * libpam-doc
+  * libpam-modules
+  * libpam-modules-bin
+  * libpam-runtime
   * libpam0g-dev
   * checkinstall
   * i3lock-color
@@ -127,6 +127,8 @@ COSMETHIC:
 1. Theme
   | Install lxappeareance (0.6.3)
   | Select desired theme.
+  | Download Moka Icons.
+  | Apply it using lx.
 2. Load images at Pictures.
 
 APPS:
@@ -143,11 +145,9 @@ APPS:
   | Put it in /opt/
   | Add to path.
   | Create desktop.
-4. Remmina (Remote Desktop) (1.2.0)
-  | sudo apt-get install remmina remmina-plugin-*
-5. Libreoffice
+4. Libreoffice
   | Installed with snap.
-6. Install arandr.
+5. Install arandr.
   | Install with apt.
 
 PACKAGES:
