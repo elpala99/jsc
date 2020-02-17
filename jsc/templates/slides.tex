@@ -132,19 +132,44 @@
 
 %%%%%%%% SETS DEFINITIONS
 \usepackage{amssymb}
+%%%% Important sets
 \renewcommand{\O}{\mathbb{O}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{{\mathbb{Z}}}
 \newcommand{\Q}{{\mathbb{Q}}}
 \newcommand{\R}{{\mathbb{R}}}
 
-\newcommand{\ri}{\rightarrow}
-\newcommand{\fOrd}{\O \ri \O}
+%%%% Statistics
+\newcommand{\E}[1]{\mathbb{E}\left[#1 \right]}
+\newcommand{\V}[1]{\mathrm{Var}\left[#1 \right]}
+
+%%%% Lambda Calculus Symbols
+\newcommand{\dneq}{\,\, \# \,\,}
+\renewcommand{\S}{\pmb{\mathrm{S}}}
+\newcommand{\I}{\pmb{\mathrm{I}}}
+\newcommand{\K}{\pmb{\mathrm{K}}}
+\newcommand{\ch}[1]{\ulcorner #1 \urcorner}
+
+%%%% Make optional parameter
+% https://tex.stackexchange.com/questions/217757/special-behavior-if-optional-argument-is-not-passed
+\usepackage{xparse}
+\NewDocumentCommand{\cx}{o}{
+  \IfNoValueTF{#1}
+  {\left[\quad\right]}
+  {\left[\, #1 \,\right]}
+}
+
+%%%%%%%% LOGIC TREES
+\usepackage{prftree}
+
+%%%%%%%% SPLIT EQUATIONS
+% https://tex.stackexchange.com/questions/51682/is-it-possible-to-pagebreak-aligned-equations
+\allowdisplaybreaks
 
 %%%%%%%% START DOCUMENT
 \title{Title here}
 
-\author{Juan Sebasti\'an C\'ardenas \\ \scalebox{0.7}{Mathematical Engineering, Universidad EAFIT}}
+\author{Juan Sebasti\'an C\'ardenas-Rodríguez \\ \scalebox{0.7}{Mathematical Engineering, Universidad EAFIT}}
 
 \begin{document}
 
