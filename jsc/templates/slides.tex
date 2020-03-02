@@ -44,16 +44,16 @@
     {\setbeamertemplate{bibliography item}[book]}
     {\ifentrytype{online}
        {\setbeamertemplate{bibliography item}[online]}
-       {\setbeamertemplate{bibliography item}[article]}}%
+       {\setbeamertemplate{bibliography item}[article]}}
   \usebeamertemplate{bibliography item}}
 
 \defbibenvironment{bibliography}
   {\list{}
-     {\settowidth{\labelwidth}{\usebeamertemplate{bibliography item}}%
-      \setlength{\leftmargin}{\labelwidth}%
-      \setlength{\labelsep}{\biblabelsep}%
-      \addtolength{\leftmargin}{\labelsep}%
-      \setlength{\itemsep}{\bibitemsep}%
+     {\settowidth{\labelwidth}{\usebeamertemplate{bibliography item}}
+      \setlength{\leftmargin}{\labelwidth}
+      \setlength{\labelsep}{\biblabelsep}
+      \addtolength{\leftmargin}{\labelsep}
+      \setlength{\itemsep}{\bibitemsep}
       \setlength{\parsep}{\bibparsep}}}
   {\endlist}
   {\item}
@@ -62,48 +62,22 @@
 % https://tex.stackexchange.com/questions/16765/biblatex-author-year-square-brackets
 \makeatletter
 
-\newrobustcmd*{\parentexttrack}[1]{%
+\newrobustcmd*{\parentexttrack}[1]{
   \begingroup
   \blx@blxinit
   \blx@setsfcodes
   \blx@bibopenparen#1\blx@bibcloseparen
   \endgroup}
 
-\AtEveryCite{%
-  \let\parentext=\parentexttrack%
-  \let\bibopenparen=\bibopenbracket%
+\AtEveryCite{
+  \let\parentext=\parentexttrack
+  \let\bibopenparen=\bibopenbracket
   \let\bibcloseparen=\bibclosebracket}
 
 \makeatother
 
 %%%%%%%% THEME SLIDES
 \usetheme{default}
-
-
-%%%%%%%% FRAME TITLES AND SUBTITLES
-% https://stackoverflow.com/questions/35810906/vim-beamer-dynamic-frame-title1
-\newif\ifinsection
-\newif\ifinsubsection
-
-\let\oldsection\section
-\renewcommand{\section}{%
-  \global\insectiontrue% In section
-  \global\insubsectionfalse% Not in subsection
-  \oldsection}
-\let\oldsubsection\subsection
-\renewcommand{\subsection}{%
-  %\global\insectionfalse% No in section
-  \global\insubsectiontrue% In subsection
-  \oldsubsection}
-
-\newcommand {\aframe}[1] {%
-  \begin{frame}
-    \ifinsection\frametitle{\secname}\fi
-    \ifinsubsection\framesubtitle{\subsecname}\fi
-  #1
-  \end{frame}
-}
-
 
 %%%%%%%% BEAMER STUFF
 \setbeamertemplate{footline}[frame number]
@@ -115,6 +89,38 @@
 % https://tex.stackexchange.com/questions/295854/how-to-edit-behaviour-of-frame-titles-during-frame-break-in-beamer
 \setbeamertemplate{frametitle continuation}[from second][]
 
+% Blue line after title
+% https://tex.stackexchange.com/questions/343517/beamer-full-width-hrule-below-frame-title
+\setbeamertemplate{frametitle}{%
+    \usebeamerfont{frametitle}\insertframetitle\strut%
+    \vskip.0\baselineskip%
+    \leaders\vrule width 0.85\paperwidth\vskip0.4pt%
+    \vskip0pt%
+    \nointerlineskip
+  }
+
+%%%%%%%% FRAME TITLES AND SUBTITLES
+% https://stackoverflow.com/questions/35810906/vim-beamer-dynamic-frame-title1
+\newif\ifinsection
+\newif\ifinsubsection
+
+\let\oldsection\section
+\renewcommand{\section}{
+  \global\insectiontrue
+  \global\insubsectionfalse
+  \oldsection}
+\let\oldsubsection\subsection
+\renewcommand{\subsection}{
+  \global\insubsectiontrue
+  \oldsubsection}
+
+\newcommand {\aframe}[1] {
+  \begin{frame}
+    \ifinsection\frametitle{\secname}\fi
+    \ifinsubsection\framesubtitle{\subsecname}\fi
+  #1
+  \end{frame}
+}
 
 %%%%%%%% FOOTNOTE STUFF
 \renewcommand{\thefootnote}{\fnsymbol{footnote}}
