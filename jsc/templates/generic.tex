@@ -67,6 +67,17 @@
 \newcommand{\K}{\pmb{\mathrm{K}}}
 \newcommand{\ch}[1]{\ulcorner #1 \urcorner}
 
+%%%% Ordinal Lambda Calculus Symbols
+\newcommand{\ordAlph}{\Sigma_{\text{Ord}}}
+\newcommand{\termOrd}{\text{Term}_\text{Ord}}
+\newcommand{\fl}{\mathrm{fl}}
+\newcommand{\sk}{\mathrm{sk}}
+
+%%%% Superscript to the left
+% https://latex.org/forum/viewtopic.php?t=455
+\usepackage{tensor}
+\newcommand{\app}[3]{\tensor*[^{#1}]{\left(#2, #3\right)}{}}
+
 %%%% Make optional parameter
 % https://tex.stackexchange.com/questions/217757/special-behavior-if-optional-argument-is-not-passed
 \usepackage{xparse}
@@ -82,6 +93,10 @@
 %%%%%%%% SPLIT EQUATIONS
 % https://tex.stackexchange.com/questions/51682/is-it-possible-to-pagebreak-aligned-equations
 \allowdisplaybreaks
+
+%%%%%%%% CODE RENDERING
+% Compile with flag -shell-escape
+\usepackage{minted}
 
 %%%%%%%% START DOCUMENT
 
