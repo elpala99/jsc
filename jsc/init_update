@@ -154,9 +154,10 @@ PACKAGES:
 1. Install xrandr (7.7) :
   | sudo apt-get install x11-xserver-utils
 2. Install wine (4.17)
-  * flex with apt (2.6.4)
-  * bison wuth apt (2.3.0)
-  | Download tar from Wine.
-  | ./configure --enable-win64
-  | make
-  | sudo make install
+  | Enable 32 bit archuitechure: sudo dpkg --ad-architecture i386
+  | wget -nc https://dl.winehq.org/wine-builds/winehq.key
+  | sudo apt-key add winehq.key
+  | sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
+  | sudo add-apt-repository ppa:cybermax-dexter/sdl2-backport
+  | Update apt.
+  | sudo apt install --install-recommends winehq-stable
