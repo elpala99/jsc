@@ -1,7 +1,7 @@
 This was done for Ubuntu 18.04 LTS.
 
 ################ MINIMAL ####################
-FIXES
+; FIXES ;
 1. Increment mouse speed (Settings)
 2. Fix right click
   | Install gnome-tweaks with apt (3.28.1)
@@ -14,17 +14,17 @@ FIXES
    EndSection
 
 APPS
-1. Install Chrome (Used google-chrome 79.0)
+1. chrome (80.0)
   | sudo nano /etc/apt/sources.list.d/google-chrome.list
     | deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
   | wget https://dl.google.com/linux/linux_signing_key.pub
   | sudo apt-key add linux_signing_key.pub
   | sudo apt update
   | rm linux_signing_key.pub
-  | sudo apt-get install google-chrome-stable
-2. Okular with apt (okular 1.3.3)
-3. Spotify with snap (spotify 1.1.10)
-4. Install Emacs (26.3)
+  | sudo apt install google-chrome-stable
+2. okular with apt (1.3.3)
+3. spotify with snap (spotify 1.1.26)
+4. emacs (26.3)
   * libx11-dev
   * libxpm-dev
   * libjpeg-dev
@@ -38,16 +38,16 @@ APPS
   * autoconf
   * gnutls-dev
   * mailutils
-  | Go to Ecuador Mirror
+  | ; Go to Ecuador Mirror and download tar ;
   | ./configure
   | sudo make
   | sudo make install
 
 I3 RELATED STUFF:
-1. Install feh with apt (2.23.2)
-2. Install xbacklight with apt (1.2.1)
-3. Install scrot with apt (0.8)
-4. Install betterlockscreen
+1. feh with apt (2.23.2)
+2. xbacklight with apt (1.2.1)
+3. scrot with apt (0.8)
+4. betterlockscreen
   * libxcb-randr0-dev
   * libxcb-xrm-dev
   * libev-dev
@@ -71,15 +71,14 @@ I3 RELATED STUFF:
     * sudo checkinstall --pkgname=i3lock-color --pkgversion=1 -y
   | git clone https://github.com/pavanjadhaw/betterlockscreen
   | sudo cp betterlockscreen /usr/local/bin
-5. Install i3blocks with apt (1.4.4).
-6. Install compton with apt (0.1)
-7. Install R-studio (1.2.5019)
-  | Install deb from web.
+5. compton with apt (0.1)
+6. R-studio (1.2.5019)
+  | ; Install deb from web. ;
   | sudo dpkg --ignore-depends=libclang-dev -i rstudio-1.2.5019-amd64.deb
-  | sudo apt-get install -f
+  | sudo apt install -f
 
 Packages:
-1. Install Python (3.8.1)
+1. python (3.8.2)
   * build-essential
   * zlib1g-dev
   * libffi-dev
@@ -91,73 +90,72 @@ Packages:
   * libgdbm-dev
   * libc6-dev
   * libbz2-dev
-  | Download .tar from python page.
-  | tar -xvf Python-x.x.x.tar.xz
-  | Change to directory extracted.
-  | ./configure
-  | sudo make
+  | ; Download tar from python page. ;
+  | ./configure --enable-optimizations
+  | make
   | sudo make install
-  | Add pip to path (See bashrc file)
-  - numpy
-  - simpy
-  - matplotlib
-  - sympy
-2. Install texlive
-  | sudo apt-get install texlive-full
-3. Install ghcup
-  * Install curl 7.58.0 with apt.
+2. texlive (2017.20180305)
+  | sudo apt install texlive-full
+3. ghcup (0.0.8)
+  * curl
   * libgmp-dev
   * libncurses-dev
-  | curl https://get-ghcup.haskell.org -sSf | sh
-4. Install Agda (2.6.0.1)
+  | curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+4. agda (2.6.1)
   | cabal update
   | cabal install Agda
   | agda-mode setup
-5. Install git with apt.
-6. Install R (3.6.1)
+5. git with apt (2.17.1)
+6. R (3.6.1)
   * gfortran
   * libcurl4-openssl-dev
-  | Download tar ball from R webpage.
+  | ; Download tar ball from R webpage. ;
   | ./configure --enable-R-shlib
   | sudo make
   | sudo make install
 
 ################### ADD ONS AND COSMETHIC ########################
-COSMETHIC:
+; COSMETHIC ;
 1. Theme
   | Install lxappeareance (0.6.3)
   | Select desired theme.
   | Download Moka Icons.
+    | sudo add-apt-repository -u ppa:snwh/ppa
+    | sudo apt install moka-icon-theme faba-icon-theme faba-mono-icons
   | Apply it using lx.
-2. Load images at Pictures.
+2. Load images at Pictures for random Background.
 
 APPS:
-1. VLC with snap (vlc 3.0.7)
-2. Install Pycharm.
+1. vlc with snap (3.0.8)
+2. ; Pycharm ;
   | Download tar
   | Move folder to /opt/
-  | Run {folder}/bin/pycharm.sh
   | Add to path
-  | Create .desktop.
-3. Install Popcorn Time.
+3. ; Popcorn Time ;
   | sudo apt update && sudo apt install libcanberra-gtk-module libgconf-2-4
   | Install tar from active website.
   | Put it in /opt/
-  | Add to path.
-  | Create desktop.
-4. Libreoffice
-  | Installed with snap.
-5. Install arandr.
-  | Install with apt.
+  | Add to path
+4. libreoffice with snap (6.4.1)
+5. arandr with apt (0.1.19)
+6. inkscape with snap (0.92.4)
+7. pdftk with snap (2.02)
+8. teams (1.3.0)
+  | ; Download deb from page ;
+9. natron (2.3.14)
+  | ; Download tgz from page ;
+  | ; Run installer ;
 
 PACKAGES:
-1. Install xrandr (7.7) :
-  | sudo apt-get install x11-xserver-utils
-2. Install wine (4.17)
-  | Enable 32 bit archuitechure: sudo dpkg --ad-architecture i386
+1. xrandr (7.7) :
+  | sudo apt install x11-xserver-utils
+2. wine (4.17)
+  | sudo dpkg --add-architecture i386
   | wget -nc https://dl.winehq.org/wine-builds/winehq.key
   | sudo apt-key add winehq.key
   | sudo apt-add-repository 'deb https://dl.winehq.org/wine-builds/ubuntu/ bionic main'
   | sudo add-apt-repository ppa:cybermax-dexter/sdl2-backport
-  | Update apt.
+  | sudo apt update
   | sudo apt install --install-recommends winehq-stable
+3. jupyter notebook (2.0.1)
+  | sudo pip install jupyterlab
