@@ -138,16 +138,30 @@ APPS:
   | Add to path
 4. libreoffice with snap (6.4.1)
 5. arandr with apt (0.1.19)
-6. inkscape with snap (0.92.4)
+6. inkscape with apt (0.92.3)
+  -- EXTENSION: textext (0.11)
+     | sudo apt install python2.7
+     | sudo apt install python-gtk2 python-gtksourceview2
+     | sudo apt-get install pdf2svg
+     | ; Download tar from github ;
+     | python2 setup.py
 7. pdftk with snap (2.02)
 8. teams (1.3.0)
   | ; Download deb from page ;
 9. natron (2.3.14)
   | ; Download tgz from page ;
   | ; Run installer ;
+10. netlogo (6.1.1)
+  | ; Download tgz from page ;
+  | ; Move with opt ;
+11. repast symphony (2.7)
+  | ; Downaload Eclipse Commiters (2019.06) from page ;
+  | ; Make sure to install eclipse in a folder with Read/write permissions ;
+  | ; Using Eclipse install Eclipse Groovy Development tools and Groovy Compile 2.4 (only) ;
+  | ; Install repast using Eclipse ;
 
 PACKAGES:
-1. xrandr (7.7) :
+1. xrandr (7.7)
   | sudo apt install x11-xserver-utils
 2. wine (4.17)
   | sudo dpkg --add-architecture i386
@@ -159,3 +173,5 @@ PACKAGES:
   | sudo apt install --install-recommends winehq-stable
 3. jupyter notebook (2.0.1)
   | sudo pip install jupyterlab
+4. java (11.0.6)
+  | sudo apt install default-jdk
