@@ -6,12 +6,10 @@ This was done for Ubuntu 18.04 LTS.
 2. Fix right click
   | Install gnome-tweaks with apt (3.28.1)
   | Change mouse emulation to Area
-3. Write file /etc/X11/xorg.conf
-   Section "Device"
-     Identifier  "Intel Graphics"
-     Driver      "intel"
-     Option      "Backlight"  "intel_backlight"
-   EndSection
+3. Fix brightness for nvidia-driver.
+  | sudo chmod +775 /sys/class/backlight/intel_backlight/brightness
+  | sudo chown $USER /sys/class/backlight/intel_backlight/brightness
+  | ; Use defined scripts ;
 
 APPS
 1. chrome (80.0)
@@ -92,7 +90,7 @@ Packages:
   * libbz2-dev
   | ; Download tar from python page. ;
   | ./configure --enable-optimizations
-  | make
+  | sudo make
   | sudo make install
 2. texlive (2017.20180305)
   | sudo apt install texlive-full
@@ -131,6 +129,10 @@ APPS:
   | Download tar
   | Move folder to /opt/
   | Add to path
+  | Specify config and system file to xdg directory.
+    * Go to idea.properties in bin
+    * idea.config.path=${user.home}/.config/pycharm
+    * idea.system.path=${user.home}/.cache/pycharm
 3. ; Popcorn Time ;
   | sudo apt update && sudo apt install libcanberra-gtk-module libgconf-2-4
   | Install tar from active website.
@@ -142,7 +144,7 @@ APPS:
   -- EXTENSION: textext (0.11)
      | sudo apt install python2.7
      | sudo apt install python-gtk2 python-gtksourceview2
-     | sudo apt-get install pdf2svg
+     | sudo apt install pdf2svg
      | ; Download tar from github ;
      | python2 setup.py
 7. pdftk with snap (2.02)
