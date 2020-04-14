@@ -177,3 +177,13 @@ PACKAGES:
   | sudo pip install jupyterlab
 4. java (11.0.6)
   | sudo apt install default-jdk
+
+; BACKUPS: ;
+1. dotfiles (Based on https://www.atlassian.com/git/tutorials/dotfiles)
+  | Startup:
+    | git init --bare $HOME/folder/to/dotfiles
+    | Add in bashrc:
+      | alias dfiles='/usr/bin/git --git-dir=$HOME/folder/to/dotfiles --work-tree=$HOME'
+    | dfiles config --local status.showUntrackedFiles no
+    | dfiles remote add origin <git-link>
+    | dfiles push --set-upstream origin master

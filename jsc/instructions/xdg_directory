@@ -1,0 +1,32 @@
+To use XDG Base Directory specification first define in bashrc:
+  | export XDG_CACHE_HOME=/home/juanscr/.cache/
+  | export XDG_CONFIG_HOME=/home/juanscr/.config/
+  | export XDG_DATA_HOME=$HOME/.local/share
+
+##### SUPPORTED #####
+1. git
+  | mkdir $XDG_CONFIG_HOME$/git
+  | mv .gitconfig $XDG_CONFIG_HOME$/git/config
+  | mv .git-credentials $XDG_CONFIG_HOME$/git/credentials
+
+##### PARTIAL #####
+1. nvidia-settings
+  | mkdir $XDG_CONFIG_HOME/nvidia
+  | mv .nvidia-settings-rc $XDG_CONFIG_HOME/nvidia/settings
+  | Add in bashrc:
+    | alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings'
+2. gnupg
+  | mv .gnupg $XDG_DATA_HOME/gnupg
+  | sudo apt install gnupg2
+  | Add in bashrc:
+    | export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+    | alias gpg2='gpg2 --homedir "$XDG_DATA_HOME"/gnupg'
+3. ICEauthority
+  | mv .ICEauthority $XDG_CACHE_HOME/ICEauthority
+  | Add in bashrc:
+    | export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority
+4. gtkrc-2.0
+  | mkdir $XDG_CONFIG_HOME/gtk-2.0
+  | mv .gtkrc-2.0 $XDG_CONFIG_HOME/gtk-2.0/gtkrc
+  | Add in bashrc:
+    | export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
