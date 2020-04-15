@@ -30,3 +30,8 @@ To use XDG Base Directory specification first define in bashrc:
   | mv .gtkrc-2.0 $XDG_CONFIG_HOME/gtk-2.0/gtkrc
   | Add in bashrc:
     | export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
+5. pycharm
+  | Modify idea.properties file
+    | idea.config.path=${user.home}/.config/.PyCharmCE/config
+    | idea.system.path=${user.home}/.cache/.PyCharmCE/system
+    | idea.plugins.path=${idea.config.path}/plugins
