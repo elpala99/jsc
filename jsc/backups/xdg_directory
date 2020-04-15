@@ -1,37 +1,32 @@
-To use XDG Base Directory specification first define in bashrc:
-  | export XDG_CACHE_HOME=/home/juanscr/.cache/
-  | export XDG_CONFIG_HOME=/home/juanscr/.config/
-  | export XDG_DATA_HOME=$HOME/.local/share
+To use XDG Base Directory specification first add a file with the .sh
+extension in /etc/profile.d folder. Add to that file the following lines:
+  | export XDG_CACHE_HOME="/home/juanscr/.cache"
+  | export XDG_CONFIG_HOME="/home/juanscr/.config"
+  | export XDG_DATA_HOME="/home/juanscr/.local/share"
+
+Create another file in /etc/profile.d which handles any other
+variables, in this instructions it will be referred as <specs-file>.
 
 ##### SUPPORTED #####
 1. git
   | mkdir $XDG_CONFIG_HOME$/git
   | mv .gitconfig $XDG_CONFIG_HOME$/git/config
   | mv .git-credentials $XDG_CONFIG_HOME$/git/credentials
+2. nv
+  | mv .nv/ $XDG_CACHE_HOME/nv
 
 ##### PARTIAL #####
-1. nvidia-settings
-  | mkdir $XDG_CONFIG_HOME/nvidia
-  | mv .nvidia-settings-rc $XDG_CONFIG_HOME/nvidia/settings
-  | Add in bashrc:
-    | alias nvidia-settings='nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings'
-2. gnupg
-  | mv .gnupg $XDG_DATA_HOME/gnupg
-  | sudo apt install gnupg2
-  | Add in bashrc:
-    | export GNUPGHOME="$XDG_DATA_HOME"/gnupg
-    | alias gpg2='gpg2 --homedir "$XDG_DATA_HOME"/gnupg'
-3. ICEauthority
-  | mv .ICEauthority $XDG_CACHE_HOME/ICEauthority
-  | Add in bashrc:
-    | export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority
-4. gtkrc-2.0
-  | mkdir $XDG_CONFIG_HOME/gtk-2.0
-  | mv .gtkrc-2.0 $XDG_CONFIG_HOME/gtk-2.0/gtkrc
-  | Add in bashrc:
+1. ICEauthority
+  | Write in <specs-file>
+    | export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority"
+  | mv .ICEauthority $XDG_CACHE_HOME"/ICEauthority
+2. gtkrc-2.0
+  | Write in <specs-file>
     | export GTK2_RC_FILES="$XDG_CONFIG_HOME"/gtk-2.0/gtkrc
-5. pycharm
-  | Modify idea.properties file
-    | idea.config.path=${user.home}/.config/.PyCharmCE/config
-    | idea.system.path=${user.home}/.cache/.PyCharmCE/system
+  | mkdir  $XDG_CONFIG_HOME/gtk-2.0
+  | mv .gtkrc-2.0  $XDG_CONFIG_HOME/gtk-2.0/gtkrc
+3. pycharm
+  | Edit in the idea.properties file and write:
+    | idea.config.path=${user.home}/.config/PyCharmCE/config
+    | idea.system.path=${user.home}/.local/share/PyCharmCE/system
     | idea.plugins.path=${idea.config.path}/plugins
