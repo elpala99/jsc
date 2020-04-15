@@ -89,16 +89,6 @@
 % https://tex.stackexchange.com/questions/295854/how-to-edit-behaviour-of-frame-titles-during-frame-break-in-beamer
 \setbeamertemplate{frametitle continuation}[from second][]
 
-% Blue line after title
-% https://tex.stackexchange.com/questions/343517/beamer-full-width-hrule-below-frame-title
-\setbeamertemplate{frametitle}{%
-    \usebeamerfont{frametitle}\insertframetitle\strut%
-    \vskip.0\baselineskip%
-    \leaders\vrule width 0.85\paperwidth\vskip0.4pt%
-    \vskip0pt%
-    \nointerlineskip
-  }
-
 %%%%%%%% FRAME TITLES AND SUBTITLES
 % https://stackoverflow.com/questions/35810906/vim-beamer-dynamic-frame-title1
 \newif\ifinsection
@@ -120,6 +110,16 @@
     \ifinsubsection\framesubtitle{\subsecname}\fi
   #1
   \end{frame}
+}
+
+% Blue line after title
+% https://tex.stackexchange.com/questions/343517/beamer-full-width-hrule-below-frame-title
+\setbeamertemplate{frametitle}{%
+    \usebeamerfont{frametitle}\insertframetitle\strut%
+    \vskip.0\baselineskip%
+    \leaders\vrule width 0.85\paperwidth\vskip0.4pt%
+    \vskip2pt%
+    \usebeamerfont{framesubtitle}\insertframesubtitle
 }
 
 %%%%%%%% FOOTNOTE STUFF
@@ -175,7 +175,8 @@
 %%%%%%%% START DOCUMENT
 \title{Title here}
 
-\author{Juan Sebasti\'an C\'ardenas-Rodríguez \\ \scalebox{0.7}{Mathematical Engineering, Universidad EAFIT}}
+\author{Juan Sebasti\'an C\'ardenas-Rodríguez \\
+  \scalebox{0.7}{Mathematical Engineering, Universidad EAFIT}}
 
 \begin{document}
 
@@ -221,16 +222,8 @@
   \begin{minipage}[t][.8\textheight]{\textwidth}
     \vfill
     \begin{center}
-          \begin{multicols}{2}
-            \scalebox{0.7}{\textbf{Student Contact}} \\
-            \scalebox{0.7}{Juan Sebasti\'an C\'ardenas} \\
-            \scalebox{0.7}{jscardenar@eafit.edu.co} \\
-
-            \columnbreak
-            \scalebox{0.7}{\textbf{Tutor Contact}} \\
-            \scalebox{0.7}{Andr\'es Sicard-Ram\'irez} \\
-            \scalebox{0.7}{asr@eafit.edu.co}
-    \end{multicols}
+        \scalebox{0.7}{Juan Sebasti\'an C\'ardenas-Rodríguez} \\
+        \scalebox{0.7}{jscardenar@eafit.edu.co} \\
     \end{center}
   \end{minipage}
 \end{frame}
