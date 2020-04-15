@@ -187,3 +187,9 @@ PACKAGES:
     | dfiles config --local status.showUntrackedFiles no
     | dfiles remote add origin <git-link>
     | dfiles push --set-upstream origin master
+  | Backup:
+    | Add to the gitignore the folder your going to clone the git.
+    | Check that the alias exists.
+    | git clone --bare <git-link> $HOME/folder/to/dotfiles
+    | dfiles config --local status.showUntrackedFiles no
+    | dfiles checkout (Solve conflicts)
