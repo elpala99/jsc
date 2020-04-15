@@ -152,9 +152,9 @@ APPS:
   | ; Download tgz from page ;
   | ; Move with opt ;
 11. repast symphony (2.7)
+  | sudo apt get install openjdk-8-jdk
   | ; Downaload Eclipse Commiters (2019.06) from page ;
-  | ; Make sure to use java 8 ;
-  | ; Make sure to install eclipse in a folder with Read/write permissions ;
+  | ; Move it to opt ;
   | ; Using Eclipse install Eclipse Groovy Development tools and Groovy Compile 2.4 (only) ;
   | ; Install repast using Eclipse ;
 
