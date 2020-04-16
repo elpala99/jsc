@@ -157,8 +157,7 @@ APPS:
   | ; Move it to opt ;
   | ; Using Eclipse install Eclipse Groovy Development tools and Groovy Compile 2.4 (only) ;
   | ; Install repast using Eclipse ;
-12. discord (0.0.10)
-  | ; Download deb from webpage ;
+12. discord with snap (0.0.10)
 
 PACKAGES:
 1. xrandr (7.7)
