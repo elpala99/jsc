@@ -10,6 +10,8 @@ This was done for Ubuntu 18.04 LTS.
   | sudo chmod +775 /sys/class/backlight/intel_backlight/brightness
   | sudo chown $USER /sys/class/backlight/intel_backlight/brightness
   | ; Use defined scripts ;
+3. Fix broken dependencies
+  | sudo apt --fix-broken install
 
 APPS
 1. chrome (80.0)
@@ -40,6 +42,10 @@ APPS
   | ./configure
   | sudo make
   | sudo make install
+5. R-studio (1.2.5019)
+  | ; Install deb from web. ;
+  | sudo dpkg --ignore-depends=libclang-dev -i rstudio-1.2.5019-amd64.deb
+  | sudo apt install -f
 
 I3 RELATED STUFF:
 1. feh with apt (2.23.2)
@@ -69,10 +75,7 @@ I3 RELATED STUFF:
   | git clone https://github.com/pavanjadhaw/betterlockscreen
   | sudo cp betterlockscreen /usr/local/bin
 4. compton with apt (0.1)
-5. R-studio (1.2.5019)
-  | ; Install deb from web. ;
-  | sudo dpkg --ignore-depends=libclang-dev -i rstudio-1.2.5019-amd64.deb
-  | sudo apt install -f
+5. xclip with apt (0.12)
 
 Packages:
 1. python (3.8.2)
@@ -158,7 +161,12 @@ APPS:
   | ; Using Eclipse install Eclipse Groovy Development tools and Groovy Compile 2.4 (only) ;
   | ; Install repast using Eclipse ;
 12. discord with snap (0.0.10)
-
+13. stremio (4.4)
+  * qml-module-qtwebengine
+  * qml-module-qtwebchannel
+  * qml-module-qt-labs-platform
+  * libmpv1
+  | ; Download deb from page ;
 PACKAGES:
 1. xrandr (7.7)
   | sudo apt install x11-xserver-utils
