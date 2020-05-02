@@ -42,10 +42,7 @@ APPS
   | ./configure
   | sudo make
   | sudo make install
-5. R-studio (1.2.5019)
-  | ; Install deb from web. ;
-  | sudo dpkg --ignore-depends=libclang-dev -i rstudio-1.2.5019-amd64.deb
-  | sudo apt install -f
+5. pavucontrol with apt (3.0)
 
 I3 RELATED STUFF:
 1. feh with apt (2.23.2)
@@ -167,6 +164,11 @@ APPS:
   * qml-module-qt-labs-platform
   * libmpv1
   | ; Download deb from page ;
+14. R-studio (1.2.5019)
+  | ; Install deb from web. ;
+  | sudo dpkg --ignore-depends=libclang-dev -i rstudio-1.2.5019-amd64.deb
+  | sudo apt install -f
+
 PACKAGES:
 1. xrandr (7.7)
   | sudo apt install x11-xserver-utils
