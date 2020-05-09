@@ -39,7 +39,7 @@ APPS
   * libgnutls28-dev
   * mailutils
   | ; Go to Ecuador Mirror and download tar ;
-  | ./configure
+  | ./configure --with-x-toolkit=lucid
   | sudo make
   | sudo make install
 5. pavucontrol with apt (3.0)
