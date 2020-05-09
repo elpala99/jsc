@@ -136,18 +136,15 @@
 %%%%%%%% CENTER OF SLIDE THANK YOU
 \usepackage{tikz}
 
-%%%%%%%% SETS DEFINITIONS
+%%%%%%%% PERSONAL COMMANDS
 \usepackage{amssymb}
+
 %%%% Important sets
 \renewcommand{\O}{\mathbb{O}}
 \newcommand{\N}{\mathbb{N}}
 \newcommand{\Z}{{\mathbb{Z}}}
 \newcommand{\Q}{{\mathbb{Q}}}
 \newcommand{\R}{{\mathbb{R}}}
-
-%%%% Statistics
-\newcommand{\E}[1]{\mathbb{E}\left[#1 \right]}
-\newcommand{\V}[1]{\mathrm{Var}\left[#1 \right]}
 
 %%%% Lambda Calculus Symbols
 \newcommand{\dneq}{\,\, \# \,\,}
@@ -156,9 +153,39 @@
 \newcommand{\K}{\pmb{\mathrm{K}}}
 \newcommand{\ch}[1]{\ulcorner #1 \urcorner}
 
+%%%% Ordinal Lambda Calculus Symbols
+\newcommand{\ordAlph}{\Sigma_{\text{Ord}}}
+\newcommand{\termOrd}{\text{Term}_\text{Ord}}
+\newcommand{\fl}{\mathrm{fl}}
+\newcommand{\sk}{\mathrm{sk}}
+
+%%%% Superscript to the left
+% https://latex.org/forum/viewtopic.php?t=455
+\usepackage{tensor}
+\newcommand{\app}[3]{\tensor*[^{#1}]{\left(#2, #3\right)}{}}
+
 %%%% Make optional parameter
 % https://tex.stackexchange.com/questions/217757/special-behavior-if-optional-argument-is-not-passed
 \usepackage{xparse}
+
+%%%% Statistics
+\NewDocumentCommand{\E}{o m}{
+  \IfNoValueTF{#1}
+  {\mathbb{E}\left[#2\right]}
+  {\mathbb{E}^{#1}\left[ #2\right]}
+}
+\NewDocumentCommand{\V}{o m}{
+  \IfNoValueTF{#1}
+  {\mathrm{Var}\left[#2\right]}
+  {\mathrm{Var}^{#1}\left[ #2\right]}
+}
+\RenewDocumentCommand{\P}{o m}{
+  \IfNoValueTF{#1}
+  {\mathrm{P}\left[#2\right]}
+  {\mathrm{P}^{#1}\left[ #2\right]}
+}
+
+%%%% Lambda Calculus
 \NewDocumentCommand{\cx}{o}{
   \IfNoValueTF{#1}
   {\left[\quad\right]}
