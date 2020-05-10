@@ -59,8 +59,9 @@
 \newcommand{\Q}{{\mathbb{Q}}}
 \newcommand{\R}{{\mathbb{R}}}
 
-%%%% Statistics
-\renewcommand{\P}[1]{\mathrm{P}\left(#1 \right)}
+%%%% Usual operations
+\newcommand{\pow}[2]{#1^{#2}}
+\newcommand{\expp}[1]{e^{#1}}
 
 %%%% Lambda Calculus
 \newcommand{\dneq}{\,\, \# \,\,}
@@ -94,6 +95,11 @@
   \IfNoValueTF{#1}
   {\mathrm{Var}\left[#2\right]}
   {\mathrm{Var}^{#1}\left[ #2\right]}
+}
+\RenewDocumentCommand{\P}{o m}{
+  \IfNoValueTF{#1}
+  {\mathrm{P}\left[#2\right]}
+  {\mathrm{P}^{#1}\left[ #2\right]}
 }
 
 %%%% Lambda Calculus
