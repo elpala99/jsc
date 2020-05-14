@@ -14,7 +14,12 @@ This was done for Ubuntu 18.04 LTS.
   | sudo apt --fix-broken install
 
 APPS
-1. chrome (80.0)
+1. ; st (0.8.3) ;
+  | Go to webpage of st https://st.suckless.org/ and download tar
+  | Untar it at the .config folder
+  | Download patches listed in config.h
+  | Apply them with git apply
+2. chrome (80.0)
   | sudo nano /etc/apt/sources.list.d/google-chrome.list
     | deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
   | wget https://dl.google.com/linux/linux_signing_key.pub
@@ -22,9 +27,9 @@ APPS
   | sudo apt update
   | rm linux_signing_key.pub
   | sudo apt install google-chrome-stable
-2. okular with apt (1.3.3)
-3. spotify with snap (spotify 1.1.26)
-4. emacs (26.3)
+3. okular with apt (1.3.3)
+4. spotify with snap (spotify 1.1.26)
+5. emacs (26.3)
   * libx11-dev
   * libxpm-dev
   * libjpeg-dev
@@ -42,7 +47,7 @@ APPS
   | ./configure --with-x-toolkit=lucid
   | sudo make
   | sudo make install
-5. pavucontrol with apt (3.0)
+6. pavucontrol with apt (3.0)
 
 I3 RELATED STUFF:
 1. feh with apt (2.23.2)
