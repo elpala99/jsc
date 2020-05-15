@@ -30,3 +30,7 @@ variables, in this instructions it will be referred as <specs-file>.
     | idea.config.path=${user.home}/.config/PyCharmCE/config
     | idea.system.path=${user.home}/.local/share/PyCharmCE/system
     | idea.plugins.path=${idea.config.path}/plugins
+4. nvidia-settings
+  | Write in bashrc
+    | alias nvidia-settings="nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings"
+  | mv .<config-file> $XDG_CONFIG_HOME"/nvidia/settings
