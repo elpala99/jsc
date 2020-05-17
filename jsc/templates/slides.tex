@@ -190,8 +190,8 @@
 }
 \RenewDocumentCommand{\P}{o m}{
   \IfNoValueTF{#1}
-  {\mathrm{P}\left[#2\right]}
-  {\mathrm{P}^{#1}\left[ #2\right]}
+  {\mathrm{P}\left(#2\right)}
+  {\mathrm{P}^{#1}\left( #2\right)}
 }
 
 %%%% Lambda Calculus
@@ -200,6 +200,19 @@
   {\left[\quad\right]}
   {\left[\, #1 \,\right]}
 }
+
+%%%% Create absolute value function
+% https://tex.stackexchange.com/questions/43008/absolute-value-symbols
+\usepackage{mathtools}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+\makeatletter
+\let\oldabs\abs
+\def\abs{\@ifstar{\oldabs}{\oldabs*}}
+%
+\let\oldnorm\norm
+\def\norm{\@ifstar{\oldnorm}{\oldnorm*}}
+\makeatother
 
 %%%%%%%% LOGIC TREES
 \usepackage{prftree}
