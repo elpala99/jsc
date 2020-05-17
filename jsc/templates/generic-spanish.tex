@@ -98,10 +98,14 @@
   {\mathrm{Var}\left[#2\right]}
   {\mathrm{Var}^{#1}\left[ #2\right]}
 }
-\RenewDocumentCommand{\P}{o m}{
+\RenewDocumentCommand{\P}{o o m}{
   \IfNoValueTF{#1}
-  {\mathrm{P}\left(#2\right)}
-  {\mathrm{P}^{#1}\left( #2\right)}
+  {\IfNoValueTF{#2}
+    {\mathrm{P}\left(#3\right)}
+    {\mathrm{P}^{#2}\left(#3\right)}}
+  {\IfNoValueTF{#2}
+    {\mathrm{P}_{#1}\left(#3\right)}
+    {\mathrm{P}_{#1}^{#2} \left(#3\right)}}
 }
 
 %%%% Lambda Calculus
