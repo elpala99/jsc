@@ -33,4 +33,8 @@ variables, in this instructions it will be referred as <specs-file>.
 4. nvidia-settings
   | Write in bashrc
     | alias nvidia-settings="nvidia-settings --config="$XDG_CONFIG_HOME"/nvidia/settings"
-  | mv .<config-file> $XDG_CONFIG_HOME"/nvidia/settings
+  | mv .<config-file> $XDG_CONFIG_HOME"/nvidia/setting
+5. X11
+  | For Xresources save it in $XDG_CONFIG_HOME/X11/Xresources and call it there.
+  | Add to <specs-file>
+    | export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
