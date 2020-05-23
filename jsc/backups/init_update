@@ -6,10 +6,6 @@ This was done for Ubuntu 18.04 LTS.
 2. Fix right click
   | Install gnome-tweaks with apt (3.28.1)
   | Change mouse emulation to Area
-3. Fix brightness for nvidia-driver.
-  | sudo chmod +775 /sys/class/backlight/intel_backlight/brightness
-  | sudo chown $USER /sys/class/backlight/intel_backlight/brightness
-  | ; Use defined scripts ;
 3. Fix broken dependencies
   | sudo apt --fix-broken install
 
@@ -19,14 +15,14 @@ APPS
   | Untar it at the .config folder
   | Download patches listed in config.h
   | Apply them with git apply
-2. chrome (80.0)
-  | sudo nano /etc/apt/sources.list.d/google-chrome.list
-    | deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
-  | wget https://dl.google.com/linux/linux_signing_key.pub
-  | sudo apt-key add linux_signing_key.pub
+2. brave (1.8.96)
+  | sudo apt install apt-transport-https curl
+  | curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc |
+    sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+  | echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" |
+    sudo tee /etc/apt/sources.list.d/brave-browser-release.list
   | sudo apt update
-  | rm linux_signing_key.pub
-  | sudo apt install google-chrome-stable
+  | sudo apt install brave-browser
 3. okular with apt (1.3.3)
 4. spotify with snap (spotify 1.1.26)
 5. emacs (26.3)
@@ -47,7 +43,10 @@ APPS
   | ./configure --with-x-toolkit=lucid
   | sudo make
   | sudo make install
-6. pavucontrol with apt (3.0)
+6. doom emacs (2.0.9)
+  | git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+  | ~/.emacs.d/bin/doom install
+7. pavucontrol with apt (3.0)
 
 I3 RELATED STUFF:
 1. feh with apt (2.23.2)
@@ -98,7 +97,7 @@ Packages:
   | sudo make install
 2. texlive (2017.20180305)
   | sudo apt install texlive-full
-3. ghcup (0.0.8)
+3. ghcup (0.1.5)
   * curl
   * libgmp-dev
   * libncurses-dev
@@ -173,6 +172,14 @@ APPS:
   | ; Install deb from web. ;
   | sudo dpkg --ignore-depends=libclang-dev -i rstudio-1.2.5019-amd64.deb
   | sudo apt install -f
+15. chrome (80.0)
+  | sudo nano /etc/apt/sources.list.d/google-chrome.list
+    | deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
+  | wget https://dl.google.com/linux/linux_signing_key.pub
+  | sudo apt-key add linux_signing_key.pub
+  | sudo apt update
+  | rm linux_signing_key.pub
+  | sudo apt install google-chrome-stable
 
 PACKAGES:
 1. xrandr (7.7)
