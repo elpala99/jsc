@@ -154,7 +154,11 @@ Packages:
   | Download Moka Icons.
     | sudo add-apt-repository -u ppa:snwh/ppa
     | sudo apt install moka-icon-theme faba-icon-theme faba-mono-icons
-  | Apply it using lx.
+  | Download Papirus Icons (recomended)
+    | sudo add-apt-repository ppa:papirus/papirus
+    | sudo apt update
+    | sudo apt install papirus-icon-theme
+  | Apply icon theme.
 2. Load images at Pictures for random Background.
 
 APPS:
