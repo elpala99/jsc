@@ -9,6 +9,13 @@ This was done for Ubuntu 18.04 LTS.
 3. Fix broken dependencies
   | sudo apt --fix-broken install
 
+WINDOW MANAGER
+1. i3 with apt (4.17.1)
+2. i3-gaps (4.17.1)
+  | sudo add-apt-repository ppa:kgilmer/speed-ricer
+  | sudo apt update
+  | sudo apt install i3-gaps
+
 APPS
 1. ; st (0.8.3) ;
   | Go to webpage of st https://st.suckless.org/ and download tar
