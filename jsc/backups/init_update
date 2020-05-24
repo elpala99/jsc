@@ -77,6 +77,24 @@ I3 RELATED STUFF:
   | sudo cp betterlockscreen /usr/local/bin
 4. compton with apt (0.1)
 5. xclip with apt (0.12)
+6. polybar (3.4.3)
+  * xcb-proto
+  * cmake
+  * libpulse-dev
+  * libjsoncpp-dev
+  * pkg-config
+  * python3-sphinx
+  * libcairo2-dev
+  * libxcb1-dev
+  * libxcb-util0-dev
+  * libxcb-randr0-dev
+  * libxcb-composite0-dev
+  * python-xcbgen
+  * libxcb-image0-dev
+  * libxcb-emh-dev
+  * libxcb-icccm4-dev
+  | ; Download tar from git page ;
+  | ./build.sh
 
 Packages:
 1. python (3.8.2)
