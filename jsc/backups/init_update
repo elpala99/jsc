@@ -54,6 +54,16 @@ APPS
   | git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
   | ~/.emacs.d/bin/doom install
 7. pavucontrol with apt (3.0)
+8. zathura with apt (0.3.8)
+9. sxiv (26.0)
+  * libexif-dev
+  * fontconfig
+  * freetype2-demos
+  * libimlib2-dev
+  * libxft-dev
+  | ; Download tar from https://github.com/muennich/sxiv ;
+  | ; Untar folder and move to .config ;
+  | sudo make clean install
 
 I3 RELATED STUFF:
 1. feh with apt (2.23.2)
