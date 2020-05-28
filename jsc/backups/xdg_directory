@@ -42,8 +42,12 @@ variables, in this instructions it will be referred as <specs-file>.
   | Add to <specs-file>
     | export GHCUP_INSTALL_BASE_PREFIX="$XDG_DATA_HOME"
   | Move .ghcup folder to $XDG_DATA_HOME
-7. lesshst
+7. less
   | mkdir -p "$XDG_CACHE_HOME"/less
   | Add to <specs-file>
     | export LESSKEY="$XDG_CONFIG_HOME"/less/lesskey
     | export LESSHISTFILE="$XDG_CACHE_HOME"/less/history
+8. wget
+  | Write in bashrc
+    | alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
+
