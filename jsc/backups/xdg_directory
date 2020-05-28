@@ -50,4 +50,7 @@ variables, in this instructions it will be referred as <specs-file>.
 8. wget
   | Write in bashrc
     | alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
-
+9. gnupg
+  | Write in <specs-file>
+    | export GNUPGHOME="$XDG_DATA_HOME"/gnupg
+  | mv .gnupg $XDG_DATA_HOME/gnupg
