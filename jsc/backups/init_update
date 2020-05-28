@@ -172,7 +172,7 @@ Packages:
 2. Load images at Pictures for random Background.
 
 APPS:
-1. vlc with snap (3.0.8)
+1. vlc with apt (3.0.8)
 2. ; Pycharm ;
   | Download tar
   | Move folder to /opt/
@@ -182,7 +182,7 @@ APPS:
   | Install tar from active website.
   | Put it in /opt/
   | Add to path
-4. libreoffice with snap (6.4.1)
+4. libreoffice with apt (6.4.1)
 5. arandr with apt (0.1.19)
 6. inkscape with apt (0.92.3)
   -- EXTENSION: textext (0.11)
