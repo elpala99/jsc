@@ -38,3 +38,7 @@ variables, in this instructions it will be referred as <specs-file>.
   | For Xresources save it in $XDG_CONFIG_HOME/X11/Xresources and call it there.
   | Add to <specs-file>
     | export XINITRC="$XDG_CONFIG_HOME"/X11/xinitrc
+6. GHCup
+  | Add to <specs-file>
+    | export GHCUP_INSTALL_BASE_PREFIX="$XDG_DATA_HOME"
+  | Move .ghcup folder to $XDG_DATA_HOME
