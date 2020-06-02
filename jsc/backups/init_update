@@ -150,7 +150,7 @@ Packages:
   | sudo make install
 2. texlive (2017.20180305)
   | sudo apt install texlive-full
-3. ghcup (0.1.5) (CHANGED TO STOW MANAGEMENT: https://bit.ly/3crRSl0)
+3. ghcup (0.1.5)
   * curl
   * libgmp-dev
   * libncurses-dev
@@ -168,7 +168,6 @@ Packages:
   | ./configure --enable-R-shlib
   | sudo make
   | sudo make install
-7. stow with apt (2.2.2)
 
 ################### ADD ONS AND COSMETHIC ########################
 ; COSMETHIC ;

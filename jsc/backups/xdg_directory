@@ -46,14 +46,7 @@ variables, in this instructions it will be referred as <specs-file>.
 8. wget
   | Write in bashrc
     | alias wget='wget --hsts-file="$XDG_CACHE_HOME/wget-hsts"'
-9. gnupg
-  | Write in <specs-file>
-    | export GNUPGHOME="$XDG_DATA_HOME"/gnupg
-  | mv .gnupg $XDG_DATA_HOME/gnupg
-
-##### WORKING? #####
-6. GHCup (NOT WORKING)
+9. GHCup (NOT WORKING)
   | Add to <specs-file>
     | export GHCUP_INSTALL_BASE_PREFIX="$XDG_DATA_HOME"
-  | Move .ghcup folder to $XDG_DATA_HOME
-  | Not sure if this is working, it kinda messed up the GHC link.
+  | Then install GHCup
