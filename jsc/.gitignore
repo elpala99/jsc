@@ -29,5 +29,6 @@ _*
 *.tmp.nlogo
 *.zip
 
+**/.auctex-auto
 **/.idea
 **/.ipynb_checkpoints
