@@ -225,6 +225,16 @@
 % https://tex.stackexchange.com/questions/51682/is-it-possible-to-pagebreak-aligned-equations
 \allowdisplaybreaks
 
+% Better spacing between display equation
+% https://bit.ly/2zLJEXN
+\makeatletter
+\g@addto@macro\normalsize{%
+    \setlength\belowdisplayskip{8pt}
+  }
+
+%%%%%%%% DIFFERENT FONTS FOR MATH
+\usepackage{mathrsfs}
+
 %%%%%%%% TO USE SHORT COMMANDS FOR VECTOR LINES
 \usepackage{esvect}
 
