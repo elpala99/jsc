@@ -143,7 +143,7 @@ I3 RELATED STUFF:
     | systemctl --user start spotify-listener
 
 Packages:
-1. python (3.8.2)
+1. python (3.8.3)
   * build-essential
   * zlib1g-dev
   * libffi-dev
@@ -171,7 +171,8 @@ Packages:
   | cabal install Agda
   | agda-mode setup
 5. git with apt (2.17.1)
-  | git config --global core.editor "emacsclient -c"
+  | git config --global credential.helper store
+  | git config --global core.editor "nvim"
 6. R (3.6.1)
   * gfortran
   * libcurl4-openssl-dev
