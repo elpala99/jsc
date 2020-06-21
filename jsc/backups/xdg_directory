@@ -18,7 +18,7 @@ variables, in this instructions it will be referred as <specs-file>.
 ##### PARTIAL #####
 1. ICEauthority
   | Write in <specs-file>
-    | export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority"
+    | export ICEAUTHORITY="$XDG_CACHE_HOME"/ICEauthority
   | mv .ICEauthority $XDG_CACHE_HOME"/ICEauthority
 2. gtkrc-2.0
   | Write in <specs-file>
