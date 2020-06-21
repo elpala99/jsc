@@ -43,7 +43,12 @@ APPS
   | sudo apt update
   | sudo apt install brave-browser
 3. okular with apt (1.3.3)
-4. spotify with snap (spotify 1.1.26)
+4. spotify (spotify 1.1.26)
+  | ; Install latest version from 
+     http://repository.spotify.com/pool/non-free/s/spotify-client/ ;
+  | sudo chmod a+wr /usr/share/spotify
+  | sudo chmod a+wr /usr/share/spotify/Apps -R
+  | curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh | sh
 5. emacs (26.3)
   * libx11-dev
   * libxpm-dev
