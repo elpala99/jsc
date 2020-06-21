@@ -63,6 +63,7 @@ APPS
   * autoconf
   * libgnutls28-dev
   * mailutils
+  * libxaw7-dev
   | ; Go to Ecuador Mirror and download tar ;
   | ./configure --with-x-toolkit=lucid
   | sudo make
