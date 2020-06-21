@@ -194,7 +194,11 @@ Packages:
     | sudo apt update
     | sudo apt install papirus-icon-theme
   | Apply icon theme.
-2. Load images at Pictures for random Background.
+2. Load images at Pictures/wallpapers for random Background.
+3. Fonts
+  | Install Font-Awesome from:
+  | https://fontawesome.com/how-to-use/on-the-desktop/setup/getting-started
+  | Move otf files to ~/.local/share/fonts/
 
 APPS:
 1. vlc with apt (3.0.8)
@@ -226,7 +230,7 @@ APPS:
   | ; Download tgz from page ;
   | ; Move with opt ;
 11. repast symphony (2.7)
-  | sudo apt get install openjdk-8-jdk
+  | sudo apt install openjdk-8-jdk
   | ; Downaload Eclipse Commiters (2019.06) from page ;
   | ; Move it to opt ;
   | ; Using Eclipse install Eclipse Groovy Development tools and Groovy Compile 2.4 (only) ;
