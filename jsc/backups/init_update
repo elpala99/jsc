@@ -19,6 +19,9 @@ This was done for Ubuntu 18.04 LTS.
   | Nvidia driver:
     | Install light tool from the following git
     | git clone https://github.com/haikarainen/light.git
+5. HDMI output (Tested for Acer Nitro 5)
+  | Write in file /usr/share/X11/xorg.conf.d/10-nvidia.conf
+     Option "PrimaryGPU" "Yes"
 
 WINDOW MANAGER
 1. i3 with apt (4.17.1)
