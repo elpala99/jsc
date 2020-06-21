@@ -137,6 +137,10 @@ I3 RELATED STUFF:
   * libxcb-icccm4-dev
   | ; Download tar from git page ;
   | ./build.sh
+  | Spotify module
+    | https://github.com/mihirlad55/polybar-spotify-module
+    | systemctl --user enable spotify-listener
+    | systemctl --user start spotify-listener
 
 Packages:
 1. python (3.8.2)
