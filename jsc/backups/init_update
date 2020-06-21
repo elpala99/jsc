@@ -44,7 +44,7 @@ APPS
   | sudo apt install brave-browser
 3. okular with apt (1.3.3)
 4. spotify (spotify 1.1.26)
-  | ; Install latest version from 
+  | ; Install latest version from
      http://repository.spotify.com/pool/non-free/s/spotify-client/ ;
   | sudo chmod a+wr /usr/share/spotify
   | sudo chmod a+wr /usr/share/spotify/Apps -R
@@ -71,6 +71,8 @@ APPS
 6. doom emacs (2.0.9)
   | git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
   | ~/.emacs.d/bin/doom install
+  | ; Run in emacs ;
+  | M-x all-the-icons-install-fonts
 7. pavucontrol with apt (3.0)
 8. zathura with apt (0.3.8)
 9. sxiv (26.0)
@@ -131,7 +133,7 @@ I3 RELATED STUFF:
   * libxcb-composite0-dev
   * python-xcbgen
   * libxcb-image0-dev
-  * libxcb-emh-dev
+  * libxcb-ewmh-dev
   * libxcb-icccm4-dev
   | ; Download tar from git page ;
   | ./build.sh
