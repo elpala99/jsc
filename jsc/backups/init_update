@@ -49,6 +49,8 @@ APPS
   | sudo chmod a+wr /usr/share/spotify
   | sudo chmod a+wr /usr/share/spotify/Apps -R
   | curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh | sh
+  | mv  ~/spicetify-cli /opt
+  | cd /usr/local/bin && ln -s /opt/spicetify-cli/spicetify
 5. emacs (26.3)
   * libx11-dev
   * libxpm-dev
