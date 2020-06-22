@@ -230,13 +230,14 @@ APPS:
   | ; Run installer ;
 10. netlogo (6.1.1)
   | ; Download tgz from page ;
-  | ; Move with opt ;
+  | ; Move to opt ;
 11. repast symphony (2.7)
   | sudo apt install openjdk-8-jdk
   | ; Downaload Eclipse Commiters (2019.06) from page ;
   | ; Move it to opt ;
   | ; Using Eclipse install Eclipse Groovy Development tools and Groovy Compile 2.4 (only) ;
   | ; Install repast using Eclipse ;
+  | ; Install vim plugin in plugin section ;
 12. discord with snap (0.0.10)
 13. stremio (4.4)
   * qml-module-qtwebengine
