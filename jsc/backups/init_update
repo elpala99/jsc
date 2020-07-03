@@ -141,6 +141,7 @@ I3 RELATED STUFF:
   | ./build.sh
   | Spotify module
     | https://github.com/mihirlad55/polybar-spotify-module
+    | sudo apt install libdbus-1-dev
     | systemctl --user enable spotify-listener
     | systemctl --user start spotify-listener
 
