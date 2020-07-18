@@ -27,6 +27,11 @@ WINDOW MANAGER
   | sudo add-apt-repository ppa:kgilmer/speed-ricer
   | sudo apt update
   | sudo apt install i3-gaps
+3. qtile (0.15.1)
+  | sudo pip install xcffib && sudo pip install cairocffi
+  | sudo apt install libdbus-1-dev libdbus-glib-1-dev
+  | sudo pip install autokey
+  | sudo pip install qtile
 
 APPS
 1. ; st (0.8.3) ;
