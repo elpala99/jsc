@@ -59,3 +59,11 @@ variables, in this instructions it will be referred as <specs-file>.
   | Add to <specs-file>
     | export RUSTUP_HOME="$XDG_DATA_HOME"/rustup
   | mv ~/.rustup $XDG_DATA_HOME/rustup
+12. Jupyter
+  | Write in <specs-file>
+    | export IPYTHONDIR="$XDG_CONFIG_HOME"/jupyter
+    | export JUPYTER_CONFIG_DIR="$XDG_CONFIG_HOME"/jupyter
+  | mv ~/.ipython ~/.config/jupyter
+13. Xauthority (tested only for Ubuntu 18.04)
+  | Write in <specs-file>
+    | export XAUTHORITY="$XDG_RUNTIME_DIR"/gdm/Xauthority
