@@ -34,11 +34,9 @@ WINDOW MANAGER
   | sudo pip install qtile
 
 APPS
-1. ; st (0.8.3) ;
-  | Go to webpage of st https://st.suckless.org/ and download tar
-  | Untar it at the .config folder
-  | Download patches listed in config.h
-  | Apply them with git apply
+1. st (0.8.3)
+  | git clone https://github.com/juanscr/st
+  | cd st && sudo make clean install
 2. brave (1.8.96)
   | sudo apt install apt-transport-https curl
   | curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc |
