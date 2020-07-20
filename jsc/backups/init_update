@@ -261,6 +261,9 @@ APPS:
   | sudo apt update
   | rm linux_signing_key.pub
   | sudo apt install google-chrome-stable
+16. ; virtualbox (6.1) ;
+  * libqt5opengl5
+  | Download deb from https://www.virtualbox.org/wiki/Linux_Downloads
 
 PACKAGES:
 1. xrandr (7.7)
