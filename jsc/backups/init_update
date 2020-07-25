@@ -28,10 +28,16 @@ WINDOW MANAGER
   | sudo apt update
   | sudo apt install i3-gaps
 3. qtile (0.15.1)
-  | sudo pip install xcffib && sudo pip install cairocffi
-  | sudo apt install libdbus-1-dev libdbus-glib-1-dev
-  | sudo pip install autokey
-  | sudo pip install qtile
+  * libxcb-render0-dev
+  * libffi-dev
+  * libcairo2
+  * libpangocairo-1.0-0
+  * libgirepository1.0-dev
+  | python3.8 -m venv src/python-envs/qtile-env
+  | source src/python-envs/qtile-env/bin/activate
+  | pip install xcffib && sudo pip install cairocffi
+  | pip install PyGObject dbus-python
+  | pip install qtile
 
 APPS
 1. st (0.8.3)
