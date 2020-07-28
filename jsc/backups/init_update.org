@@ -20,7 +20,6 @@ LTS.
            Option      "Backlight"  "intel_backlight"
          EndSection
         #+END_VERSE
-
    - Nvidia driver:
      - Install light tool from the following git
      - git clone https://github.com/haikarainen/light.git
