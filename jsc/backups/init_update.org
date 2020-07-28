@@ -13,16 +13,13 @@ LTS.
 3. Fix Brightness controls:
    - Intel Driver:
      - Write file /etc/X11/xorg.conf
-
+        #+BEGIN_VERSE
          Section "Device"
-
            Identifier  "Intel Graphics"
-
            Driver      "intel"
-
            Option      "Backlight"  "intel_backlight"
-
          EndSection
+        #+END_VERSE
 
    - Nvidia driver:
      - Install light tool from the following git
