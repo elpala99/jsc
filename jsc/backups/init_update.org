@@ -1,4 +1,4 @@
-#+OPTIONS: \n:t
+#+MACRO: NL @@latex:\\@@ @@html:<br>@@
 * MINIMAL INSTALLATION
 In this section, the minimum packages and fixes that I use for my system can be
 found. For each package, the depedencies are shown and most of the packages are
@@ -13,7 +13,7 @@ LTS.
    - sudo apt --fix-broken install
 3. Fix Brightness controls:
    - Intel Driver:
-     - Write file /etc/X11/xorg.conf
+     - Write file /etc/X11/xorg.conf {{{NL}}}
          Section "Device"
            Identifier  "Intel Graphics"
            Driver      "intel"
