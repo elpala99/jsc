@@ -1,31 +1,26 @@
-* MINIMAL INSTALLATION
-In this section, the minimum packages and fixes that I use for my system can be
-found. For each package, the depedencies are shown and most of the packages are
-built from source to extract the newest version. This was done for Ubuntu 18.04
-LTS.
+This was done for Ubuntu 18.04 LTS.
 
-** FIXES
-1. Fix right click
-   - Install gnome-tweaks with apt (3.28.1)
-   - Change mouse emulation to Area
-2. Fix broken dependencies
-   - sudo apt --fix-broken install
-3. Fix Brightness controls:
-   - Intel Driver:
-     - Write file /etc/X11/xorg.conf
-        #+BEGIN_VERSE
-         Section "Device"
-           Identifier  "Intel Graphics"
-           Driver      "intel"
-           Option      "Backlight"  "intel_backlight"
-         EndSection
-        #+END_VERSE
-   - Nvidia driver:
-     - Install light tool from the following git
-     - git clone https://github.com/haikarainen/light.git
-4. HDMI output (Tested for Acer Nitro 5)
-   - Install new drivers from nvidia.
-
+################ MINIMAL ####################
+; FIXES ;
+1. Increment mouse speed (Settings)
+2. Fix right click
+  | Install gnome-tweaks with apt (3.28.1)
+  | Change mouse emulation to Area
+3. Fix broken dependencies
+  | sudo apt --fix-broken install
+4. Fix Brightness controls:
+  | Intel Driver:
+     | Write file /etc/X11/xorg.conf
+        Section "Device"
+            Identifier  "Intel Graphics"
+            Driver      "intel"
+            Option      "Backlight"  "intel_backlight"
+        EndSection
+  | Nvidia driver:
+    | Install light tool from the following git
+    | git clone https://github.com/haikarainen/light.git
+5. HDMI output (Tested for Acer Nitro 5)
+  | Install new drivers from nvidia.
 WINDOW MANAGER
 1. i3 with apt (4.17.1)
 2. i3-gaps (4.17.1)
