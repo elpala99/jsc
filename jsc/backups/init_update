@@ -76,7 +76,7 @@ APPS
   * mailutils
   * libxaw7-dev
   | ; Go to Ecuador Mirror and download tar ;
-  | ./configure --with-x-toolkit=lucid
+  | ./configure
   | sudo make
   | sudo make install
 6. doom emacs (2.0.9)
