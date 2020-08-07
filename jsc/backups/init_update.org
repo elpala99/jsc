@@ -33,6 +33,7 @@ WINDOW MANAGER
     sudo apt update
     sudo apt install i3-gaps
    #+end_src
+
 3. qtile (0.15.1)
    #+BEGIN_SRC bash
     sudo apt install libxcb-render0-dev libffi-dev libcairo2 libpangocairo-1.0-0 libgirepository1.0-dev
