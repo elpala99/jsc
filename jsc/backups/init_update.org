@@ -1,3 +1,4 @@
+#+EXPORT_EXCLUDE_TAGS: noexport
 * MINIMAL
 In this section, the instructions for a minimal install of my system can be
 found. Most of the instructions for packages are source code compilations, as
