@@ -1,8 +1,3 @@
-#+begin_src bash
-sudo add-apt-repository ppa:kgilmer/speed-ricer
-sudo apt update
-sudo apt install i3-gaps
-#+end_src
 * MINIMAL
 In this section, the instructions for a minimal install of my system can be
 found. Most of the instructions for packages are source code compilations, as
