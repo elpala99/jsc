@@ -10,15 +10,18 @@ This was done for Ubuntu 18.04 LTS.
 In this section, the instructions for a minimal install of my system can be
 found. 
 ** FIXES
-1. Increment mouse speed (Settings)
-2. Fix right click
-  - Install gnome-tweaks with apt (3.28.1)
-  - Change mouse emulation to Area
-3. Fix broken dependencies
-  - sudo apt --fix-broken install
-4. Fix Brightness controls:
-  - Intel Driver:
-     + Write file /etc/X11/xorg.conf
+1. Fix right click, tested with gnome-tweaks (3.28.1)
+#+begin_src bash
+sudo apt install gnome-tweaks
+#+end_src
+Over the keyboard and mouse section, change mouse emulation to area. Sometimes a
+restart is required.
+2. Fix broken dependencies
+#+begin_src bash
+sudo apt --fix-broken install
+#+end_src
+1. Fix Brightness controls:
+ For *Intel* Driver, write in file /etc/X11/xorg.conf:
 #+BEGIN_SRC
 Section "Device"
     Identifier  "Intel Graphics"
@@ -26,11 +29,14 @@ Section "Device"
     Option      "Backlight"  "intel_backlight"
 EndSection
 #+END_SRC
-  - Nvidia driver:
-    + Install light tool from the following git
-    + git clone https://github.com/haikarainen/light.git
-5. HDMI output (Tested for Acer Nitro 5)
-  - Install new drivers from nvidia.
+
+For *Nvidia* driver install light (1.2):
+#+begin_src bash
+wget -L https://github.com/haikarainen/light/releases/download/v1.2/light_1.2_amd64.deb
+#+end_src
+
+1. HDMI output (Tested for Acer Nitro 5)
+   - Install new drivers from nvidia.
 WINDOW MANAGER
 1. i3 with apt (4.17.1)
 2. i3-gaps (4.17.1)
