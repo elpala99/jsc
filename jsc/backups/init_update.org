@@ -10,18 +10,21 @@ This was done for Ubuntu 18.04 LTS.
 In this section, the instructions for a minimal install of my system can be
 found. 
 ** FIXES
-1. Fix right click, tested with gnome-tweaks (3.28.1)
+Fix right click, tested with gnome-tweaks (3.28.1)
 #+begin_src bash
 sudo apt install gnome-tweaks
 #+end_src
+
 Over the keyboard and mouse section, change mouse emulation to area. Sometimes a
 restart is required.
-2. Fix broken dependencies
+
+Fix broken dependencies
 #+begin_src bash
 sudo apt --fix-broken install
 #+end_src
-1. Fix Brightness controls:
- For *Intel* Driver, write in file /etc/X11/xorg.conf:
+
+For *Intel* Driver, if =xbacklight= is not working for you, write in file
+/etc/X11/xorg.conf:
 #+BEGIN_SRC
 Section "Device"
     Identifier  "Intel Graphics"
@@ -30,7 +33,7 @@ Section "Device"
 EndSection
 #+END_SRC
 
-For *Nvidia* driver install light (1.2):
+For *Nvidia* driver, instead of using =xbacklight=, install =light (1.2)=:
 #+begin_src bash
 wget -L https://github.com/haikarainen/light/releases/download/v1.2/light_1.2_amd64.deb
 #+end_src
