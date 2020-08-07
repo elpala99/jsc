@@ -13,13 +13,13 @@ repositories are not updated. This was tested for Ubuntu 18.04 LTS.
 4. Fix Brightness controls:
   - Intel Driver:
      + Write file /etc/X11/xorg.conf
-       #+BEGIN_VERSE
-        Section "Device"
-            Identifier  "Intel Graphics"
-            Driver      "intel"
-            Option      "Backlight"  "intel_backlight"
-        EndSection
-       #+END_VERSE
+#+BEGIN_VERSE
+Section "Device"
+    Identifier  "Intel Graphics"
+    Driver      "intel"
+    Option      "Backlight"  "intel_backlight"
+EndSection
+#+END_VERSE
   - Nvidia driver:
     + Install light tool from the following git
     + git clone https://github.com/haikarainen/light.git
