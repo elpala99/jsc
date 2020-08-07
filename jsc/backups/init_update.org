@@ -28,12 +28,11 @@ repositories are not updated. This was tested for Ubuntu 18.04 LTS.
 WINDOW MANAGER
 1. i3 with apt (4.17.1)
 2. i3-gaps (4.17.1)
-   #+begin_src bash
+   #+begin_src bash :results replace drawer :hlines yes
     sudo add-apt-repository ppa:kgilmer/speed-ricer
     sudo apt update
     sudo apt install i3-gaps
    #+end_src
-
 3. qtile (0.15.1)
    #+BEGIN_SRC bash
     sudo apt install libxcb-render0-dev libffi-dev libcairo2 libpangocairo-1.0-0 libgirepository1.0-dev
