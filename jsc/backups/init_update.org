@@ -13,13 +13,13 @@ repositories are not updated. This was tested for Ubuntu 18.04 LTS.
 4. Fix Brightness controls:
   - Intel Driver:
      + Write file /etc/X11/xorg.conf
-#+BEGIN_VERSE
+#+BEGIN_SRC
 Section "Device"
     Identifier  "Intel Graphics"
     Driver      "intel"
     Option      "Backlight"  "intel_backlight"
 EndSection
-#+END_VERSE
+#+END_SRC
   - Nvidia driver:
     + Install light tool from the following git
     + git clone https://github.com/haikarainen/light.git
@@ -37,11 +37,13 @@ sudo apt install i3-gaps
 #+BEGIN_SRC bash
 sudo apt install libxcb-render0-dev libffi-dev libcairo2 libpangocairo-1.0-0 libgirepository1.0-dev
 #+END_SRC
-   | python3.8 -m venv src/python-envs/qtile-env
-   | source src/python-envs/qtile-env/bin/activate
-   | pip install xcffib && sudo pip install cairocffi
-   | pip install PyGObject dbus-python
-   | pip install qtile
+- The folder to save the qtile environment will be noted as $QTILE_ENV_FOLDER
+#+begin_src bash
+python3.8 -m venv $QTILE_ENV_FOLDER
+source $QTILE_ENV_FOLDER/bin/activate
+pip install xcffib && sudo pip install cairocffi
+pip install PyGObject dbus-python qtile
+#+end_src
 
 APPS
 1. st (0.8.3)
