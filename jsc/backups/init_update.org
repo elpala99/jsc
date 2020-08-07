@@ -28,7 +28,7 @@ repositories are not updated. This was tested for Ubuntu 18.04 LTS.
 WINDOW MANAGER
 1. i3 with apt (4.17.1)
 2. i3-gaps (4.17.1)
-   #+begin_src bash :results replace drawer :hlines yes
+   #+begin_src bash
     sudo add-apt-repository ppa:kgilmer/speed-ricer
     sudo apt update
     sudo apt install i3-gaps
