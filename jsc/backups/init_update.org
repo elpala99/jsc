@@ -1,8 +1,14 @@
+In this document, the installation instruction for several packages are shown.
+Most of the instructions for packages are source code compilations, as the
+latest version is needed for most of the packages and the Ubuntu LTS
+repositories are not updated. Furthermore, the intent of this document is for
+users of all experience with Linux, hence every step is going to be detailed.
+
+This was done for Ubuntu 18.04 LTS.
+
 * MINIMAL
 In this section, the instructions for a minimal install of my system can be
-found. Most of the instructions for packages are source code compilations, as
-the latest version is needed for most of the packages and the Ubuntu LTS
-repositories are not updated. This was tested for Ubuntu 18.04 LTS.
+found. 
 ** FIXES
 1. Increment mouse speed (Settings)
 2. Fix right click
