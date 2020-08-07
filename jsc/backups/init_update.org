@@ -37,7 +37,10 @@ sudo apt install i3-gaps
 #+BEGIN_SRC bash
 sudo apt install libxcb-render0-dev libffi-dev libcairo2 libpangocairo-1.0-0 libgirepository1.0-dev
 #+END_SRC
-- The folder to save the qtile environment will be noted as $QTILE_ENV_FOLDER
+
+The folder to save the qtile environment will be noted as $QTILE_ENV_FOLDER.
+Furthermore, this installation was done with python3.8.
+
 #+begin_src bash
 python3.8 -m venv $QTILE_ENV_FOLDER
 source $QTILE_ENV_FOLDER/bin/activate
