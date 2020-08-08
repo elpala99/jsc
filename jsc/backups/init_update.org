@@ -238,7 +238,7 @@ sudo apt install libxcb-randr0-dev libxcb-xrm-dev libev-dev libxcb-xinerama0-dev
 #+end_src
 
 For the dependency of ~i3lock-color~ the installation was not done with apt.
-The instructions ar
+The instructions are
 #+begin_src bash
 git clone https://github.com/PandorasFox/i3lock-color
 cd i3lock-color
