@@ -115,6 +115,8 @@ sudo ln -s /opt/DIR_TO_BINARY/binary
 the suckless philosphy. I constructed my own build of ST therefore the
 instructions are guided to install my own build. For more information about this
 terminal go to https://st.suckless.org/.
+
+To install my build do
 #+begin_src bash
 git clone https://github.com/juanscr/st
 cd st && sudo make clean install
