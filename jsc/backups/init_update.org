@@ -14,7 +14,7 @@ changes or ask any questions.
 
 This was done for Ubuntu 18.04 LTS.
 
-* Minimal
+* Minimal Installation
 In this section, the instructions for a minimal install of my system can be
 found. 
 ** Fixes
@@ -101,8 +101,15 @@ Keywords=wm;tiling
 
 ** APPS
 For this section, many apps will be installed directly from the source given by
-the creator of the application. Hence, for apps installed not using the package
-manager
+the creator of the application. Hence, for apps installed in this way I highly
+suggest having the source code in the \/opt directory.
+
+Furthermore, to have that application in the PATH I also suggest creating a
+symbolic link in the folder \/usr/local\/bin by doing the following command
+#+begin_src bash
+cd /usr/local/bin
+sudo ln -s /opt/DIR_TO_BINARY/binary
+#+end_src
 *** ST v(0.8.3)
 [S]imple [T]erminal is a a highly customizable minimal terminal, developed with
 the suckless philosphy. I constructed my own build of ST therefore the
