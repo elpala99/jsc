@@ -253,34 +253,49 @@ git clone https://github.com/pavanjadhaw/betterlockscreen
 sudo cp betterlockscreen /usr/local/bin
 #+end_src
 
-1. polybar (3.4.3)
-   * xcb-proto
-   * cmake
-   * libpulse-dev
-   * libjsoncpp-dev
-   * libxcb-xkb-dev
-   * libxcb-xrm-dev
-   * libxcb-cursor-dev
-   * libmpdclient-dev
-   * libnl-genl-3-dev
-   * pkg-config
-   * python3-sphinx
-   * libcairo2-dev
-   * libxcb1-dev
-   * libxcb-util0-dev
-   * libxcb-randr0-dev
-   * libxcb-composite0-dev
-   * python-xcbgen
-   * libxcb-image0-dev
-   * libxcb-ewmh-dev
-   * libxcb-icccm4-dev
-   | ; Download tar from git page ;
-   | ./build.sh
-   | Spotify module
-     | https://github.com/mihirlad55/polybar-spotify-module
-     | sudo apt install libdbus-1-dev
-     | systemctl --user enable spotify-listener
-     | systemctl --user start spotify-listener
+*** Polybar v(3.4.3)
+/Dependencies/
+#+begin_src bash
+sudo apt install xcb-proto cmake libpulse-dev libjsoncpp-dev libxcb-xkb-dev libxcb-xrm-dev libxcb-cursor-dev libmpdclient-dev libnl-genl-3-dev pkg-config python3-sphinx libcairo2-dev libxcb1-dev libxcb-util0-dev libxcb-randr0-dev libxcb-composite0-dev python-xcbgen libxcb-image0-dev libxcb-ewmh-dev libxcb-icccm4-dev
+#+end_src
+
+For ~polybar~ the latest build was extracted from the [[https://github.com/polybar/polybar][polybar github repository.]]
+Furthermore, the dependencies and the installation process can be found on the
+same place. But, the instructions I used where
+#+begin_src bash
+wget -L https://github.com/polybar/polybar/archive/3.4.3.tar.gz
+tar xf 3.4.3.tar.gz
+cd polybar-3.4.3
+./build.sh
+#+end_src
+
+For this one, select the modules that you desire to use.
+
+**** Spotify Polybar Module
+For my ~polybar~ I use this spotify module to display the song I'm playing and
+have clickable controls to my music. To use this, the ~ipc~ has to be enabled.
+
+/Dependencies/
+#+begin_src bash
+sudo apt install libdbus-1-dev
+#+end_src
+
+For this installation, as this module is very lightweight, the implementation
+has to be running in the background to listen to Spotify actions. Hence, first
+clone the git repository
+#+begin_src bash
+git clone https://github.com/mihirlad55/polybar-spotify-module
+#+end_src
+
+Then, tell ~systemd~ to always start the listener at startup with the command
+#+begin_src bash
+systemctl --user enable spotify-listener
+#+end_src
+
+Lastly, start the service by
+#+begin_src bash
+systemctl --user start spotify-listener
+#+end_src
 
 Packages:
 1. python (3.8.3)
