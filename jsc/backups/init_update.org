@@ -1,6 +1,6 @@
 * About
 In this document, the installation instruction for several packages and
-applications are shown.
+applications are shown that I use in my computer.
 
 Most of the instructions for packages are source code compilations, as the
 latest version is needed for most of the packages and the Ubuntu LTS
@@ -13,6 +13,7 @@ sharing and saving my installation process, feel welcomed to suggest any
 changes or ask any questions.
 
 This was done for Ubuntu 18.04 LTS.
+[[./images/pc-screenshot.png]]
 
 * Table of contents :toc:
 - [[#about][About]]
