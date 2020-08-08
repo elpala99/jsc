@@ -125,7 +125,7 @@ git clone https://github.com/juanscr/st
 cd st && sudo make clean install
 #+end_src
 
-*** brave-browser v(1.8.96)
+*** Brave Browser v(1.8.96)
 /Dependencies/
 #+begin_src bash
 sudo apt install apt-transport-https curl
@@ -140,8 +140,7 @@ sudo apt update
 sudo apt install brave-browser
 #+end_src
 
-1. okular with apt (1.3.3)
-2. spotify (spotify 1.1.26)
+1. spotify (spotify 1.1.26)
   | ; Install latest version from
      http://repository.spotify.com/pool/non-free/s/spotify-client/ ;
   | sudo chmod a+wr /usr/share/spotify
@@ -149,7 +148,7 @@ sudo apt install brave-browser
   | curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh | sh
   | mv  ~/spicetify-cli /opt
   | cd /usr/local/bin && ln -s /opt/spicetify-cli/spicetify
-3. emacs (26.3)
+2. emacs (26.3)
    * libx11-dev
    * libxpm-dev
    * libjpeg-dev
@@ -168,14 +167,12 @@ sudo apt install brave-browser
    | ./configure --with-x-toolkit=lucid
    | sudo make
    | sudo make install
-4. doom emacs (2.0.9)
+3. doom emacs (2.0.9)
   | git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
   | ~/.emacs.d/bin/doom install
   | ; Run in emacs ;
   | M-x all-the-icons-install-fonts
-5. pavucontrol with apt (3.0)
-6. zathura with apt (0.3.8)
-7. sxiv (26.0)
+4. sxiv (26.0)
    * libexif-dev
    * fontconfig
    * freetype2-demos
@@ -184,6 +181,10 @@ sudo apt install brave-browser
    | ; Download tar from https://github.com/muennich/sxiv ;
    | ; Untar folder and move to .config ;
    | sudo make clean install
+*** Installed using apt
+1. ~okular~ v(1.3.3)
+2. ~pavucontrol~ v(3.0)
+3. ~zathura~ v(0.3.8)
 
 I3 RELATED STUFF:
 1. feh with apt (2.23.2)
