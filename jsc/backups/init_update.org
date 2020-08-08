@@ -166,6 +166,8 @@ For the usage and themes, go to [[https://github.com/khanhas/spicetify-cli][spic
 #+begin_src bash
 sudo apt install libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libgtk2.0-dev libtinfo-dev libncurses5-dev automake autoconf libgnutls28-dev mailutils libxaw7-dev
 #+end_src
+When installing the dependencies, a popup a of the ~mailutils~ package will
+appear asking about the configuration. I select the *No Configuration* option.
 
 For this installation, do
 #+begin_src bash
@@ -184,6 +186,7 @@ instructions are:
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 #+end_src
+
 1. sxiv (26.0)
    * libexif-dev
    * fontconfig
