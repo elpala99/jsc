@@ -14,6 +14,14 @@ changes or ask any questions.
 
 This was done for Ubuntu 18.04 LTS.
 
+* Table of contents :toc:
+- [[#about][About]]
+- [[#minimal-installation][Minimal Installation]]
+  - [[#fixes][Fixes]]
+  - [[#window-manager][Window Manager]]
+  - [[#applications][Applications]]
+  - [[#packages][Packages]]
+
 * Minimal Installation
 In this section, the instructions for a minimal install of my system can be
 found. 
@@ -101,7 +109,7 @@ Type=Application
 Keywords=wm;tiling
 #+end_src
 
-** APPS
+** Applications
 For this section, many apps will be installed directly from the source given by
 the creator of the application. Hence, for apps installed in this way I highly
 suggest having the source code in the =/opt= directory.
@@ -208,103 +216,106 @@ sudo make clean install
 1. ~okular~ v(1.3.3)
 2. ~pavucontrol~ v(3.0)
 3. ~zathura~ v(0.3.8)
+4. arandr with apt (0.1.19)
 
-I3 RELATED STUFF:
-1. feh with apt (2.23.2)
-2. scrot with apt (0.8)
-3. betterlockscreen
-  * libxcb-randr0-dev
-  * libxcb-xrm-dev
-  * libev-dev
-  * libxcb-xinerama0-dev
-  * libxcb-xkb-dev
-  * libxcb-composite0-dev
-  * libxcb-image0-dev
-  * libxkbcommon-dev
-  * libxkbcommon-x11-dev
-  * libpam-cracklib
-  * libpam-doc
-  * libpam-modules
-  * libpam-modules-bin
-  * libpam-runtime
-  * libpam0g-dev
-  * checkinstall
-  * i3lock-color
-    * git clone https://github.com/PandorasFox/i3lock-color
-    * git tag -f "git-$(git rev-parse --short HEAD)"
-    * autoreconf -i && ./configure && make
-    * sudo checkinstall --pkgname=i3lock-color --pkgversion=1 -y
-  | git clone https://github.com/pavanjadhaw/betterlockscreen
-  | sudo cp betterlockscreen /usr/local/bin
-4. compton with apt (0.1)
-5. xclip with apt (0.12)
-6. polybar (3.4.3)
-  * xcb-proto
-  * cmake
-  * libpulse-dev
-  * libjsoncpp-dev
-  * libxcb-xkb-dev
-  * libxcb-xrm-dev
-  * libxcb-cursor-dev
-  * libmpdclient-dev
-  * libnl-genl-3-dev
-  * pkg-config
-  * python3-sphinx
-  * libcairo2-dev
-  * libxcb1-dev
-  * libxcb-util0-dev
-  * libxcb-randr0-dev
-  * libxcb-composite0-dev
-  * python-xcbgen
-  * libxcb-image0-dev
-  * libxcb-ewmh-dev
-  * libxcb-icccm4-dev
-  | ; Download tar from git page ;
-  | ./build.sh
-  | Spotify module
-    | https://github.com/mihirlad55/polybar-spotify-module
-    | sudo apt install libdbus-1-dev
-    | systemctl --user enable spotify-listener
-    | systemctl --user start spotify-listener
+** Packages
+*** Installed using apt
+1. ~git~ v(2.17.1)
+2. ~feh~ v(2.23.2)
+3. ~scrot~ v(0.8)
+4. ~compton~ v(0.1)
+5. ~xclip~ v(0.12)
+6. ~texlive-full~ [LaTeX] v(2017.20180305)
+
+*** Betterlockscreen
+   * libxcb-randr0-dev
+   * libxcb-xrm-dev
+   * libev-dev
+   * libxcb-xinerama0-dev
+   * libxcb-xkb-dev
+   * libxcb-composite0-dev
+   * libxcb-image0-dev
+   * libxkbcommon-dev
+   * libxkbcommon-x11-dev
+   * libpam-cracklib
+   * libpam-doc
+   * libpam-modules
+   * libpam-modules-bin
+   * libpam-runtime
+   * libpam0g-dev
+   * checkinstall
+   * i3lock-color
+     * git clone https://github.com/PandorasFox/i3lock-color
+     * git tag -f "git-$(git rev-parse --short HEAD)"
+     * autoreconf -i && ./configure && make
+     * sudo checkinstall --pkgname=i3lock-color --pkgversion=1 -y
+   | git clone https://github.com/pavanjadhaw/betterlockscreen
+   | sudo cp betterlockscreen /usr/local/bin
+1. polybar (3.4.3)
+   * xcb-proto
+   * cmake
+   * libpulse-dev
+   * libjsoncpp-dev
+   * libxcb-xkb-dev
+   * libxcb-xrm-dev
+   * libxcb-cursor-dev
+   * libmpdclient-dev
+   * libnl-genl-3-dev
+   * pkg-config
+   * python3-sphinx
+   * libcairo2-dev
+   * libxcb1-dev
+   * libxcb-util0-dev
+   * libxcb-randr0-dev
+   * libxcb-composite0-dev
+   * python-xcbgen
+   * libxcb-image0-dev
+   * libxcb-ewmh-dev
+   * libxcb-icccm4-dev
+   | ; Download tar from git page ;
+   | ./build.sh
+   | Spotify module
+     | https://github.com/mihirlad55/polybar-spotify-module
+     | sudo apt install libdbus-1-dev
+     | systemctl --user enable spotify-listener
+     | systemctl --user start spotify-listener
 
 Packages:
 1. python (3.8.3)
-  * build-essential
-  * zlib1g-dev
-  * libffi-dev
-  * libreadline-gplv2-dev
-  * libncursesw5-dev
-  * libssl-dev
-  * libsqlite3-dev
-  * tk-dev
-  * libgdbm-dev
-  * libc6-dev
-  * libbz2-dev
-  | ; Download tar from python page. ;
-  | ./configure --enable-optimizations
-  | sudo make
-  | sudo make install
-2. texlive (2017.20180305)
-  | sudo apt install texlive-full
-3. ghcup (0.1.5)
-  * curl
-  * libgmp-dev
-  * libncurses-dev
-  | curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
-4. agda (2.6.1)
+   * build-essential
+   * zlib1g-dev
+   * libffi-dev
+   * libreadline-gplv2-dev
+   * libncursesw5-dev
+   * libssl-dev
+   * libsqlite3-dev
+   * tk-dev
+   * libgdbm-dev
+   * libc6-dev
+   * libbz2-dev
+   | ; Download tar from python page. ;
+   | ./configure --enable-optimizations
+   | sudo make
+   | sudo make install
+2. ghcup (0.1.5)
+   * curl
+   * libgmp-dev
+   * libncurses-dev
+   | curl --proto '=https' --tlsv1.2 -sSf https://get-ghcup.haskell.org | sh
+3. agda (2.6.1)
   | cabal update
   | cabal install Agda
   | agda-mode setup
-5. git with apt (2.17.1)
+4. git with apt (2.17.1)
   | git config --global credential.helper store
   | git config --global core.editor "nvim"
-6. R (3.6.1)
-  * gfortran
-  * libcurl4-openssl-dev
-  | ; Download tar ball from R webpage. ;
-  | ./configure --enable-R-shlib
-  | sudo make
-  | sudo make install
+5. R (3.6.1)
+   * gfortran
+   * libcurl4-openssl-dev
+   | ; Download tar ball from R webpage. ;
+   | ./configure --enable-R-shlib
+   | sudo make
+   | sudo make install
 
 ################### ADD ONS AND COSMETHIC ########################
 ; COSMETHIC ;
@@ -337,42 +348,41 @@ APPS:
   | Put it in /opt/
   | Add to path
 4. libreoffice with apt (6.4.1)
-5. arandr with apt (0.1.19)
-6. inkscape with apt (0.92.3)
+5. inkscape with apt (0.92.3)
   -- EXTENSION: textext (0.11)
      | sudo apt install python2.7
      | sudo apt install python-gtk2 python-gtksourceview2
      | sudo apt install pdf2svg
      | ; Download tar from github https://github.com/textext/textext/releases ;
      | python2 setup.py
-7. pdftk with snap (2.02)
-8. teams (1.3.0)
+6. pdftk with snap (2.02)
+7. teams (1.3.0)
   | ; Download deb from page ;
-9. natron (2.3.14)
+8. natron (2.3.14)
   | ; Download tgz from page ;
   | ; Run installer ;
-10. netlogo (6.1.1)
-  | ; Download tgz from page ;
-  | ; Move to opt ;
-11. repast symphony (2.7)
+9. netlogo (6.1.1)
+ | ; Download tgz from page ;
+ | ; Move to opt ;
+10. repast symphony (2.7)
   | sudo apt install openjdk-8-jdk
   | ; Downaload Eclipse Commiters (2019.06) from page ;
   | ; Move it to opt ;
   | ; Using Eclipse install Eclipse Groovy Development tools and Groovy Compile 2.4 (only) ;
   | ; Install repast using Eclipse ;
   | ; Install vim plugin in plugin section ;
-12. discord with snap (0.0.10)
-13. stremio (4.4)
-  * qml-module-qtwebengine
-  * qml-module-qtwebchannel
-  * qml-module-qt-labs-platform
-  * libmpv1
-  | ; Download deb from page ;
-14. R-studio (1.2.5019)
+11. discord with snap (0.0.10)
+12. stremio (4.4)
+    * qml-module-qtwebengine
+    * qml-module-qtwebchannel
+    * qml-module-qt-labs-platform
+    * libmpv1
+    | ; Download deb from page ;
+13. R-studio (1.2.5019)
   | ; Install deb from web. ;
   | sudo dpkg --ignore-depends=libclang-dev -i rstudio-1.2.5019-amd64.deb
   | sudo apt install -f
-15. chrome (80.0)
+14. chrome (80.0)
   | sudo nano /etc/apt/sources.list.d/google-chrome.list
     | deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main
   | wget https://dl.google.com/linux/linux_signing_key.pub
@@ -380,9 +390,9 @@ APPS:
   | sudo apt update
   | rm linux_signing_key.pub
   | sudo apt install google-chrome-stable
-16. ; virtualbox (6.1) ;
-  * libqt5opengl5
-  | Download deb from https://www.virtualbox.org/wiki/Linux_Downloads
+15. ; virtualbox (6.1) ;
+    * libqt5opengl5
+    | Download deb from https://www.virtualbox.org/wiki/Linux_Downloads
 
 PACKAGES:
 1. xrandr (7.7)
