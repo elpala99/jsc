@@ -217,7 +217,7 @@ sudo make clean install
 1. ~okular~ v(1.3.3)
 2. ~pavucontrol~ v(3.0)
 3. ~zathura~ v(0.3.8)
-4. arandr with apt (0.1.19)
+4. ~arandr~ with apt (0.1.19)
 
 ** Packages
 *** Installed using apt
