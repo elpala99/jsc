@@ -228,30 +228,31 @@ sudo make clean install
 5. ~xclip~ v(0.12)
 6. ~texlive-full~ [LaTeX] v(2017.20180305)
 
-*** Betterlockscreen
-   * libxcb-randr0-dev
-   * libxcb-xrm-dev
-   * libev-dev
-   * libxcb-xinerama0-dev
-   * libxcb-xkb-dev
-   * libxcb-composite0-dev
-   * libxcb-image0-dev
-   * libxkbcommon-dev
-   * libxkbcommon-x11-dev
-   * libpam-cracklib
-   * libpam-doc
-   * libpam-modules
-   * libpam-modules-bin
-   * libpam-runtime
-   * libpam0g-dev
-   * checkinstall
-   * i3lock-color
-     * git clone https://github.com/PandorasFox/i3lock-color
-     * git tag -f "git-$(git rev-parse --short HEAD)"
-     * autoreconf -i && ./configure && make
-     * sudo checkinstall --pkgname=i3lock-color --pkgversion=1 -y
-   | git clone https://github.com/pavanjadhaw/betterlockscreen
-   | sudo cp betterlockscreen /usr/local/bin
+*** Betterlockscreen v(3.0.1)
+~betterlockscreen~ is a minimal screen lock application based on i3lock. For
+more information, visit [[https://github.com/pavanjadhaw/betterlockscreen/releases][betterlockscreen github repository.]]
+
+/Dependencies/
+#+begin_src bash
+sudo apt install libxcb-randr0-dev libxcb-xrm-dev libev-dev libxcb-xinerama0-dev libxcb-xkb-dev libxcb-composite0-dev libxcb-image0-dev libxkbcommon-dev libxkbcommon-x11-dev libpam-cracklib libpam-doc libpam-modules libpam-modules-bin libpam-runtime libpam0g-dev checkinstall
+#+end_src
+
+For the dependency of ~i3lock-color~ the installation was not done with apt.
+The instructions ar
+#+begin_src bash
+git clone https://github.com/PandorasFox/i3lock-color
+cd i3lock-color
+git tag -f "git-$(git rev-parse --short HEAD)"
+autoreconf -i && ./configure && make
+sudo checkinstall --pkgname=i3lock-color --pkgversion=1 -y
+#+end_src
+
+Finally, to get the latest build version of ~betterlockscreen~ do
+#+begin_src bash
+git clone https://github.com/pavanjadhaw/betterlockscreen
+sudo cp betterlockscreen /usr/local/bin
+#+end_src
+
 1. polybar (3.4.3)
    * xcb-proto
    * cmake
