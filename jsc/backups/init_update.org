@@ -150,7 +150,7 @@ wget -L http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-cli
 sudo dpkg -i spotify-client_1.1.26.601.gbe11e53b-15_amd64.deb
 #+end_src
 
-**** Spicetify
+**** Spicetify v(0.9.9)
 ~spicetify~ allows to customize your Spotify, using different themes and
 creating your own. To use it, do
 #+begin_src bash
@@ -158,31 +158,29 @@ sudo chmod a+wr /usr/share/spotify
 sudo chmod a+wr /usr/share/spotify/Apps -R
 curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh | sh
 #+end_src
-1. emacs (26.3)
-   * libx11-dev
-   * libxpm-dev
-   * libjpeg-dev
-   * libpng-dev
-   * libgif-dev
-   * libtiff-dev
-   * libgtk2.0-dev
-   * libtinfo-dev
-   * libncurses5-dev
-   * automake
-   * autoconf
-   * libgnutls28-dev
-   * mailutils
-   * libxaw7-dev
-   | ; Go to Ecuador Mirror and download tar ;
-   | ./configure --with-x-toolkit=lucid
-   | sudo make
-   | sudo make install
-2. doom emacs (2.0.9)
+
+For the usage and themes, go to [[https://github.com/khanhas/spicetify-cli][spicetify git repository.]]
+
+*** Emacs v(26.3)
+/Dependencies/
+#+begin_src bash
+sudo apt install libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libgtk2.0-dev libtinfo-dev libncurses5-dev automake autoconf libgnutls28-dev mailutils libxaw7-dev
+#+end_src
+
+For this installation, do
+#+begin_src bash
+wget -L http://ftpmirror.gnu.org/emacs/emacs-26.3.tar.xz
+tar xf emacs-26.3.tar.xz && cd emacs-26.3
+./configure && sudo make
+sudo make install
+#+end_src
+
+1. doom emacs (2.0.9)
   | git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
   | ~/.emacs.d/bin/doom install
   | ; Run in emacs ;
   | M-x all-the-icons-install-fonts
-3. sxiv (26.0)
+2. sxiv (26.0)
    * libexif-dev
    * fontconfig
    * freetype2-demos
