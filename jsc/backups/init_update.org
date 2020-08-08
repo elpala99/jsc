@@ -140,15 +140,25 @@ sudo apt update
 sudo apt install brave-browser
 #+end_src
 
-1. spotify (spotify 1.1.26)
-  | ; Install latest version from
-     http://repository.spotify.com/pool/non-free/s/spotify-client/ ;
-  | sudo chmod a+wr /usr/share/spotify
-  | sudo chmod a+wr /usr/share/spotify/Apps -R
-  | curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh | sh
-  | mv  ~/spicetify-cli /opt
-  | cd /usr/local/bin && ln -s /opt/spicetify-cli/spicetify
-2. emacs (26.3)
+*** Spotify v(1.1.26)
+It is important to notice that there exists a ~snap~ package for ~spotify~. I
+highly suggest to not use ~snap~, specially if spicetify is something you want
+to use. You can check if there is a new version for spotify and change the
+following link accordingly going to [[http://repository.spotify.com/pool/non-free/s/spotify-client/][spotify client]].
+#+begin_src bash
+wget -L http://repository.spotify.com/pool/non-free/s/spotify-client/spotify-client_1.1.26.501.gbe11e53b-15_amd64.deb
+sudo dpkg -i spotify-client_1.1.26.601.gbe11e53b-15_amd64.deb
+#+end_src
+
+**** Spicetify
+~spicetify~ allows to customize your Spotify, using different themes and
+creating your own. To use it, do
+#+begin_src bash
+sudo chmod a+wr /usr/share/spotify
+sudo chmod a+wr /usr/share/spotify/Apps -R
+curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh | sh
+#+end_src
+1. emacs (26.3)
    * libx11-dev
    * libxpm-dev
    * libjpeg-dev
@@ -167,12 +177,12 @@ sudo apt install brave-browser
    | ./configure --with-x-toolkit=lucid
    | sudo make
    | sudo make install
-3. doom emacs (2.0.9)
+2. doom emacs (2.0.9)
   | git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
   | ~/.emacs.d/bin/doom install
   | ; Run in emacs ;
   | M-x all-the-icons-install-fonts
-4. sxiv (26.0)
+3. sxiv (26.0)
    * libexif-dev
    * fontconfig
    * freetype2-demos
