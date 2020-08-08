@@ -187,15 +187,23 @@ git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 #+end_src
 
-1. sxiv (26.0)
-   * libexif-dev
-   * fontconfig
-   * freetype2-demos
-   * libimlib2-dev
-   * libxft-dev
-   | ; Download tar from https://github.com/muennich/sxiv ;
-   | ; Untar folder and move to .config ;
-   | sudo make clean install
+*** Sxiv v(26.0)
+~sxiv~ is a minimal image viewer, with ~vim~-like commands, programmed with the
+suckless philosophy. I find it one of the better image viewers I have used, so I
+highly suggest it. For more information, go to [[https://github.com/muennich/sxiv][sxiv github repository.]]
+
+/Dependencies/
+#+begin_src bash
+sudo apt install libexif-dev fontconfig freetype2-demos libimlib2-dev libxft-dev
+#+end_src
+
+For the stable release chosen for this installation, do
+#+begin_src bash
+wget -L https://github.com/muennich/sxiv/archive/v26.tar.gz
+cd sxiv-26
+sudo make clean install
+#+end_src
+
 *** Installed using apt
 1. ~okular~ v(1.3.3)
 2. ~pavucontrol~ v(3.0)
