@@ -19,7 +19,7 @@ In this section, the instructions for a minimal install of my system can be
 found. 
 ** Fixes
 *** Mouse Fix
-Fix right click, tested with =gnome-tweaks= v(3.28.1)
+Fix right click, tested with ~gnome-tweaks~ v(3.28.1)
 #+begin_src bash
 sudo apt install gnome-tweaks
 #+end_src
@@ -32,7 +32,7 @@ sudo apt --fix-broken install
 #+end_src
 
 *** Brightness Controls
-For *Intel* Driver, if =xbacklight= is not working for you, write in file
+For *Intel* Driver, if ~xbacklight~ is not working for you, write in file
 /etc/X11/xorg.conf:
 #+BEGIN_SRC
 Section "Device"
@@ -41,7 +41,7 @@ Section "Device"
     Option      "Backlight"  "intel_backlight"
 EndSection
 #+END_SRC
-For *Nvidia* driver, instead of using =xbacklight=, install =light= v(1.2):
+For *Nvidia* driver, instead of using ~xbacklight~, install ~light~ v(1.2):
 #+begin_src bash
 wget -L https://github.com/haikarainen/light/releases/download/v1.2/light_1.2_amd64.deb
 sudo dpkg -i light_1.2_amd64.deb
@@ -54,8 +54,8 @@ sudo apt install i3
 #+end_src
 
 *** i3-gaps v(4.17.1)
-It is important to notice that =i3-gaps= does not need a previous installation
-of =i3=.
+It is important to notice that ~i3-gaps~ does not need a previous installation
+of ~i3~.
 #+begin_src bash
 sudo add-apt-repository ppa:kgilmer/speed-ricer
 sudo apt update
@@ -70,7 +70,7 @@ sudo apt install libxcb-render0-dev libffi-dev libcairo2 libpangocairo-1.0-0 lib
 
 The folder to save the qtile environment will be noted as $QTILE_ENV_FOLDER,
 when this keyword is shown just replace it with the actual directory.
-Furthermore, this installation was done with =python3.8= but using another
+Furthermore, this installation was done with ~python3.8~ but using another
 version would not change the procedure drastically.
 #+begin_src bash
 python3.8 -m venv $QTILE_ENV_FOLDER
@@ -88,7 +88,7 @@ source $QTILE_ENV_FOLDER/bin/activate
 python3 $QTILE_ENV_FOLDER/bin/qtile $*
 #+end_src
 
-Lastly, create a file with root permisions in \/usr\/share\/xsessions/ named
+Lastly, create a file with root permisions in =/usr/share/xsessions/= named
 qtile-venv.desktop and write
 #+begin_src
 [Desktop Entry]
@@ -102,10 +102,10 @@ Keywords=wm;tiling
 ** APPS
 For this section, many apps will be installed directly from the source given by
 the creator of the application. Hence, for apps installed in this way I highly
-suggest having the source code in the \/opt directory.
+suggest having the source code in the =/opt= directory.
 
 Furthermore, to have that application in the PATH I also suggest creating a
-symbolic link in the folder \/usr/local\/bin by doing the following command
+symbolic link in the folder =/usr/local/bin= by doing the following command
 #+begin_src bash
 cd /usr/local/bin
 sudo ln -s /opt/DIR_TO_BINARY/binary
