@@ -175,12 +175,16 @@ tar xf emacs-26.3.tar.xz && cd emacs-26.3
 sudo make install
 #+end_src
 
-1. doom emacs (2.0.9)
-  | git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
-  | ~/.emacs.d/bin/doom install
-  | ; Run in emacs ;
-  | M-x all-the-icons-install-fonts
-2. sxiv (26.0)
+**** Doom Emacs (2.0.9)
+~doom~ is a configuration framework for Emacs, which is the distribution of
+Emacs I personally use. For more information go to [[https://github.com/hlissner/doom-emacs][doom emacs github repository.]]
+The installation process can be also found in the previous repository. But the
+instructions are:
+#+begin_src bash
+git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+~/.emacs.d/bin/doom install
+#+end_src
+1. sxiv (26.0)
    * libexif-dev
    * fontconfig
    * freetype2-demos
