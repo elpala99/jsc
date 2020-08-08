@@ -117,11 +117,10 @@ instructions are guided to install my own build. For more information about this
 terminal go to https://st.suckless.org/.
 #+begin_src bash
 git clone https://github.com/juanscr/st
-
+cd st && sudo make clean install
 #+end_src
-  | git clone https://github.com/juanscr/st
-  | cd st && sudo make clean install
-2. brave (1.8.96)
+
+1. brave (1.8.96)
   | sudo apt install apt-transport-https curl
   | curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc |
     sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
@@ -129,8 +128,8 @@ git clone https://github.com/juanscr/st
     sudo tee /etc/apt/sources.list.d/brave-browser-release.list
   | sudo apt update
   | sudo apt install brave-browser
-3. okular with apt (1.3.3)
-4. spotify (spotify 1.1.26)
+2. okular with apt (1.3.3)
+3. spotify (spotify 1.1.26)
   | ; Install latest version from
      http://repository.spotify.com/pool/non-free/s/spotify-client/ ;
   | sudo chmod a+wr /usr/share/spotify
@@ -138,41 +137,41 @@ git clone https://github.com/juanscr/st
   | curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh | sh
   | mv  ~/spicetify-cli /opt
   | cd /usr/local/bin && ln -s /opt/spicetify-cli/spicetify
-5. emacs (26.3)
-  * libx11-dev
-  * libxpm-dev
-  * libjpeg-dev
-  * libpng-dev
-  * libgif-dev
-  * libtiff-dev
-  * libgtk2.0-dev
-  * libtinfo-dev
-  * libncurses5-dev
-  * automake
-  * autoconf
-  * libgnutls28-dev
-  * mailutils
-  * libxaw7-dev
-  | ; Go to Ecuador Mirror and download tar ;
-  | ./configure --with-x-toolkit=lucid
-  | sudo make
-  | sudo make install
-6. doom emacs (2.0.9)
+4. emacs (26.3)
+   * libx11-dev
+   * libxpm-dev
+   * libjpeg-dev
+   * libpng-dev
+   * libgif-dev
+   * libtiff-dev
+   * libgtk2.0-dev
+   * libtinfo-dev
+   * libncurses5-dev
+   * automake
+   * autoconf
+   * libgnutls28-dev
+   * mailutils
+   * libxaw7-dev
+   | ; Go to Ecuador Mirror and download tar ;
+   | ./configure --with-x-toolkit=lucid
+   | sudo make
+   | sudo make install
+5. doom emacs (2.0.9)
   | git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
   | ~/.emacs.d/bin/doom install
   | ; Run in emacs ;
   | M-x all-the-icons-install-fonts
-7. pavucontrol with apt (3.0)
-8. zathura with apt (0.3.8)
-9. sxiv (26.0)
-  * libexif-dev
-  * fontconfig
-  * freetype2-demos
-  * libimlib2-dev
-  * libxft-dev
-  | ; Download tar from https://github.com/muennich/sxiv ;
-  | ; Untar folder and move to .config ;
-  | sudo make clean install
+6. pavucontrol with apt (3.0)
+7. zathura with apt (0.3.8)
+8. sxiv (26.0)
+   * libexif-dev
+   * fontconfig
+   * freetype2-demos
+   * libimlib2-dev
+   * libxft-dev
+   | ; Download tar from https://github.com/muennich/sxiv ;
+   | ; Untar folder and move to .config ;
+   | sudo make clean install
 
 I3 RELATED STUFF:
 1. feh with apt (2.23.2)
