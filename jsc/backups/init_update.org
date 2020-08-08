@@ -23,6 +23,7 @@ Fix right click, tested with ~gnome-tweaks~ v(3.28.1)
 #+begin_src bash
 sudo apt install gnome-tweaks
 #+end_src
+
 Over the keyboard and mouse section, change mouse emulation to area. Sometimes a
 restart is required.
 
@@ -41,6 +42,7 @@ Section "Device"
     Option      "Backlight"  "intel_backlight"
 EndSection
 #+END_SRC
+
 For *Nvidia* driver, instead of using ~xbacklight~, install ~light~ v(1.2):
 #+begin_src bash
 wget -L https://github.com/haikarainen/light/releases/download/v1.2/light_1.2_amd64.deb
@@ -110,11 +112,12 @@ symbolic link in the folder =/usr/local/bin= by doing the following command
 cd /usr/local/bin
 sudo ln -s /opt/DIR_TO_BINARY/binary
 #+end_src
+
 *** ST v(0.8.3)
 [S]imple [T]erminal is a a highly customizable minimal terminal, developed with
 the suckless philosphy. I constructed my own build of ST therefore the
 instructions are guided to install my own build. For more information about this
-terminal go to https://st.suckless.org/.
+terminal go to [[https://st.suckless.org/][ST page]].
 
 To install my build do
 #+begin_src bash
@@ -122,16 +125,23 @@ git clone https://github.com/juanscr/st
 cd st && sudo make clean install
 #+end_src
 
-1. brave (1.8.96)
-  | sudo apt install apt-transport-https curl
-  | curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc |
-    sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
-  | echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" |
-    sudo tee /etc/apt/sources.list.d/brave-browser-release.list
-  | sudo apt update
-  | sudo apt install brave-browser
-2. okular with apt (1.3.3)
-3. spotify (spotify 1.1.26)
+*** brave-browser v(1.8.96)
+/Dependencies/
+#+begin_src bash
+sudo apt install apt-transport-https curl
+#+end_src
+
+The instructions for the brave-browser installation can be found in [[https://brave-browser.readthedocs.io/en/latest/installing-brave.html#linux][brave
+documentation]]. But, just for consistency, it can be done by
+#+begin_src bash
+curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
+echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
+sudo apt update
+sudo apt install brave-browser
+#+end_src
+
+1. okular with apt (1.3.3)
+2. spotify (spotify 1.1.26)
   | ; Install latest version from
      http://repository.spotify.com/pool/non-free/s/spotify-client/ ;
   | sudo chmod a+wr /usr/share/spotify
@@ -139,7 +149,7 @@ cd st && sudo make clean install
   | curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/install.sh | sh
   | mv  ~/spicetify-cli /opt
   | cd /usr/local/bin && ln -s /opt/spicetify-cli/spicetify
-4. emacs (26.3)
+3. emacs (26.3)
    * libx11-dev
    * libxpm-dev
    * libjpeg-dev
@@ -158,14 +168,14 @@ cd st && sudo make clean install
    | ./configure --with-x-toolkit=lucid
    | sudo make
    | sudo make install
-5. doom emacs (2.0.9)
+4. doom emacs (2.0.9)
   | git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
   | ~/.emacs.d/bin/doom install
   | ; Run in emacs ;
   | M-x all-the-icons-install-fonts
-6. pavucontrol with apt (3.0)
-7. zathura with apt (0.3.8)
-8. sxiv (26.0)
+5. pavucontrol with apt (3.0)
+6. zathura with apt (0.3.8)
+7. sxiv (26.0)
    * libexif-dev
    * fontconfig
    * freetype2-demos
