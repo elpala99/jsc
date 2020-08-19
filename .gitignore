@@ -27,6 +27,7 @@ _*
 *.synctex.gz
 *.toc
 *.tmp.nlogo
+*.vrb
 *.zip
 
 **/.auctex-auto
