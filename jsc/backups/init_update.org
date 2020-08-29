@@ -170,30 +170,49 @@ curl -fsSL https://raw.githubusercontent.com/khanhas/spicetify-cli/master/instal
 
 For the usage and themes, go to [[https://github.com/khanhas/spicetify-cli][spicetify git repository.]]
 
-*** Emacs v(26.3)
+*** Emacs v(27.1)
 /Dependencies/
 #+begin_src bash
-sudo apt install libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libgtk2.0-dev libtinfo-dev libncurses5-dev automake autoconf libgnutls28-dev mailutils libxaw7-dev
+sudo apt install libx11-dev libxpm-dev libjpeg-dev libpng-dev libgif-dev libtiff-dev libgtk2.0-dev libtinfo-dev libncurses5-dev automake autoconf libgnutls28-dev mailutils libxaw7-dev libjansson-dev
 #+end_src
 When installing the dependencies, a popup a of the ~mailutils~ package will
 appear asking about the configuration. I select the *No Configuration* option.
 
 For this installation, do
 #+begin_src bash
-wget -L http://ftpmirror.gnu.org/emacs/emacs-26.3.tar.xz
-tar xf emacs-26.3.tar.xz && cd emacs-26.3
-./configure && sudo make
+wget -L http://ftpmirror.gnu.org/emacs/emacs-27.1.tar.xz
+tar xf emacs-27.1.tar.xz && cd emacs-27.1
+./configure --with-json && sudo make
 sudo make install
 #+end_src
 
 **** Doom Emacs (2.0.9)
+/Dependencies/
+
+=ripgrep v(11.0.2)= for Ubuntu 18.04 is not packaged in apt. For more
+information surrounding =ripgrep= visit [[https://github.com/BurntSushi/ripgrep][their github page.]] Hence, to install it
+do
+#+begin_src bash
+curl -LO https://github.com/BurntSushi/ripgrep/releases/download/11.0.2/ripgrep_11.0.2_amd64.deb
+sudo dpkg -i ripgrep_11.0.2_amd64.deb
+#+end_src
+
+=fd v(8.1.1)= is also not packaged for Ubuntu 18.04 (visit [[https://github.com/sharkdp/fd][their github page]] for
+more information). To install it do
+#+begin_src bash
+wget -L https://github.com/sharkdp/fd/releases/download/v8.1.1/fd_8.1.1_amd64.deb
+sudo dpkg -i fd_8.1.1_amd64.deb
+#+end_src
+
 ~doom~ is a configuration framework for Emacs, which is the distribution of
 Emacs I personally use. For more information go to [[https://github.com/hlissner/doom-emacs][doom emacs github repository.]]
-The installation process can be also found in the previous repository. But the
-instructions are:
+The installation process can be also found in the previous repository.
+
+Furthermore, =emacs v(27.1)= added compliance for XDG base directory
+specification. Hence, the instructions are:
 #+begin_src bash
-git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
-~/.emacs.d/bin/doom install
+git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.config/emacs
+~/.config/emacs/bin install
 #+end_src
 
 *** Sxiv v(26.0)
