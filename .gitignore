@@ -1,3 +1,9 @@
+# Exclude executables
+*
+!/**/
+!*.*
+
+# Exclude extensions
 *~
 *#
 .#*
@@ -22,6 +28,8 @@ _*
 *.prv
 *.ps
 *.pyc
+.RData
+.Rhistory
 *.run.xml
 *.snm
 *.synctex.gz
@@ -30,6 +38,8 @@ _*
 *.vrb
 *.zip
 
+# Exclude folders
 **/.auctex-auto
 **/.idea
 **/.ipynb_checkpoints
+**/.Rproj.user
