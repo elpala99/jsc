@@ -1,13 +1,9 @@
 \documentclass[potrait]{a0poster}
-\usepackage[utf8]{inputenc}
-\usepackage{float}
+\input{commands.tex}
 \usepackage[hidelinks]{hyperref}
-\usepackage{graphicx}
-\usepackage{amsmath}
 
 %%%%%%%% MULTI COLUMN OPTIONS
-% https://tex.stackexchange.com/questions/102052/how-to-change-spacing-between-columns-for-just-one-page-in-the-document
-\usepackage{multicol}
+% https://bit.ly/2SNGoB4
 \setlength\columnsep{3cm}
 
 %%%%%%%% PAPER SIZE
@@ -22,27 +18,8 @@
             bibstyle=authoryear,
             citestyle=authoryear,
             backend=biber]{biblatex}
-\addbibresource{../../bib/ref.bib}
+\addbibresource{ref.bib}
 \renewcommand{\bibfont}{\Large}
-
-%%%%%%%% SETS DEFINITIONS
-\usepackage{amssymb}
-\renewcommand{\O}{\mathbb{O}}
-\newcommand{\N}{\mathbb{N}}
-\newcommand{\Z}{{\mathbb{Z}}}
-\newcommand{\Q}{{\mathbb{Q}}}
-\newcommand{\R}{{\mathbb{R}}}
-\newcommand{\ri}{\rightarrow}
-\newcommand{\fOrd}{\O \ri \O}
-
-%%%%%%%% DEFINITION AND THEOREM DEFINITIONS
-\usepackage{amsthm}
-\newtheorem{remark}{Remark}
-\newtheorem{theorem}{Theorem}
-
-\theoremstyle{definition}
-\newtheorem{definition}{Definition}
-\newtheorem*{question}{Question}
 
 %%%%%%%% HEADER FOR UNIVERSITY
 \newcommand{\printheader}{
@@ -69,7 +46,7 @@
   \end{center}}
 
 %%%%%%%% NOT ENUMERATE SECTION
-% https://tex.stackexchange.com/questions/70417/do-not-enumerate-a-section-but-add-it-into-table-of-contents
+% https://bit.ly/3iQ2Lk0
 \setcounter{secnumdepth}{0}
 
 %%%%%%%% FONT SIZES
@@ -82,11 +59,11 @@
 
 
 %%%%%%%% TITLE AND AUTHOR
-\title{Ordinal Numbers in Type Theory}
+\title{Title Here}
 \author{Juan Sebastián Cárdenas-Rodríguez \\
   \textnormal{\scalebox{0.7}{jscardenar@eafit.edu.co} \\
-    \vspace{0.5cm} \scalebox{0.7}{Mathematical Engineering,
-      Universidad EAFIT}}\footnotemark}
+    \vspace{0.5cm} \scalebox{0.7}{Mathematical Engineering, Universidad
+      EAFIT}}\footnotemark}
 
 %%%%%%%% AUTOMATIC TITLE AND AUTHOR
 % https://latex.org/forum/viewtopic.php?t=12152
