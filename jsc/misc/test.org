@@ -22,4 +22,5 @@ there is no whitespace here.
 
 2. Lastly, using the =:= command it happens something similar.
    : there is whitespace here
+   Now testing it removing the spaces:
 : there is no whitespace here.
