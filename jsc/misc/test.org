@@ -18,7 +18,8 @@ there is an extra line here.
 there is no extra line here.
    #+end_src
 The problem of using this method is that org mode breaks the list and does not
-create more items using =C-RET=, as the indentation is broken.
+create more items using =C-RET=, as the indentation is broken. Furthermore it is
+not displayed at the same level as other items of the list.
 
 * Using :
 For =:= it happens similarly.
