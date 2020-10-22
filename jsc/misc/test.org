@@ -10,23 +10,23 @@ there is no extra line here
 1. Adding a list adds an extra line because it adds an additional spaces when
    creating the =src= block.
    #+begin_src
-there is whitespace here.
+there is an extra line here.
    #+end_src
 2. Removing the spaces at the start of the block, end of the block or both
    removes this error:
 #+begin_src
-there is no whitespace here.
+there is no extra line here.
    #+end_src
 The problem of using this method is that org mode breaks the list and does not
 create more items using =C-RET=, as the indentation is broken.
 
-* Other Header
+* Using :
 For =:= it happens similarly.
-: no extra line here here.
+: no extra line here.
 
 1. Creating a list and then adding =:=, it happens that:
-   : whitespace here
+   : extra line here
 2. Removing spaces before:
-: whitespace not here.
+: extra line not here.
 
 This method also breaks the items list.
