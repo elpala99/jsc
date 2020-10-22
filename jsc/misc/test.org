@@ -18,7 +18,7 @@ there is whitespace here.
    By erasing the additional spaces this problem does not occur.
    #+begin_src
 there is no whitespace here.
-   #+end_src
+#+end_src
 
 2. Lastly, using the =:= command it happens something similar.
    : there is whitespace here
