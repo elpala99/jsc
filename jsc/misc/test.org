@@ -1,0 +1,25 @@
+#+TITLE: Test
+
+Testing additional whitespace.
+
+* Adding header for example
+#+begin_src
+there is not whitespace here
+#+end_src
+
+: no whitespace here.
+
+1. Adding a list adds a whitespace because it adds an additional space when
+   creating the =src= block.
+   #+begin_src
+there is whitespace here.
+   #+end_src
+
+   By erasing the additional spaces this problem does not occur.
+   #+begin_src
+there is no whitespace here.
+   #+end_src
+
+2. Lastly, using the =:= command it happens something similar.
+   : there is whitespace here
+: there is no whitespace here.
