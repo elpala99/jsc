@@ -14,7 +14,14 @@ there is not whitespace here
    #+begin_src
 there is whitespace here.
    #+end_src
-
+   It can be caused by spaces at the end of the block.
+#+begin_src
+there is whitespace here.
+   #+end_src
+   Also by having spaces at the start of the block.
+#+begin_src
+there is whitespace here.
+   #+end_src
    By erasing the additional spaces this problem does not occur.
 #+begin_src
 there is no whitespace here.
