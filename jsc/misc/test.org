@@ -2,11 +2,13 @@
 
 Testing additional whitespace.
 
-* Adding header for example
+* Header
+When a =src= block is created inside a header it does not present any problem.
 #+begin_src
 there is not whitespace here
 #+end_src
 
+Neither =:=.
 : no whitespace here.
 
 1. Adding a list adds a whitespace because it adds an additional space when
@@ -14,20 +16,18 @@ there is not whitespace here
    #+begin_src
 there is whitespace here.
    #+end_src
-   It can be caused by spaces at the end of the block.
-#+begin_src
-there is whitespace here.
-   #+end_src
-   Also by having spaces at the start of the block.
-   #+begin_src
-there is whitespace here.
-#+end_src
-   By erasing the additional spaces this problem does not occur.
+2. Removing the spaces at the start of the block, end of the block or both
+   removes this error. This is seen in
 #+begin_src
 there is no whitespace here.
-#+end_src
+   #+end_src
+The problem of using this method is that org mode breaks the list and does not
+create more items using =C-RET=, as the indentation is broken.
 
-2. Lastly, using the =:= command it happens something similar.
-   : there is whitespace here
-   Now testing it removing the spaces:
-: there is no whitespace here.
+* Other Header
+1. This also applies for =:=
+   : whitespace here
+2. Removing spaces before:
+: whitespace not here.
+
+This method also breaks the items.
