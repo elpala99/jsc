@@ -16,7 +16,7 @@ there is whitespace here.
    #+end_src
 
    By erasing the additional spaces this problem does not occur.
-   #+begin_src
+#+begin_src
 there is no whitespace here.
 #+end_src
 
