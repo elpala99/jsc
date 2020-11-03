@@ -1,0 +1,12 @@
+#+TITLE: Firmeza
+
+* Tabla de Puntos
+| Name    | Score |
+| Peñuela |     3 |
+| Palacio |     3 |
+| Maya    |     3 |
+| Chitiva |     3 |
+| JuanSe  |     3 |
+
+* Salidas
+1. 17/10/2020 - Primera salida para la tabla. Todos fueron.
