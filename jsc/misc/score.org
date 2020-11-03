@@ -1,6 +1,5 @@
 #+TITLE: Firmeza
 
-* Tabla de Puntos
 | Name    | Score |
 | Peñuela |     3 |
 | Palacio |     3 |
@@ -10,3 +9,49 @@
 
 * Salidas
 1. 17/10/2020 - Primera salida para la tabla. Todos fueron.
+
+* Reglas
+** Información básica
+*Fecha*: 17 de Octubre.
+
+*Salida*: solo cuando mínimo tres del grupo vayan a salir y se digan por el
+grupo. Salida solo presencial.
+
+*Requisitos*
+1. Una salida al mes.
+2. Una publeada semestral.
+3. Una finca al año.
+
+*Partidos*: Cuentan finales de champions, finales de libertadores y partidos de
+Colombia.
+
+** Ganancia de puntos
+*** Fincas
+1. *5 puntos* por ir a la finca si se quedan con todos.
+2. Si se baja temprano de ls finca *3 puntos*.
+3. Si se duerme antes de las 3:30 a.m. sin morirse de trago, *2 puntos*.
+4. Si se queda menos de 12 horas, no suma puntos.
+
+*** Cumpleaños
+*5 puntos* por asistir, reglas similares a la finca.
+
+*** Aniversario
+*6 puntos* asistencia. Debe ser el 17 de Octubre o el fin de semana siguiente.
+
+*** Salidas normales
+*3 puntos* por ir al parche..
+
+*** Partidos Fútbol
+*2 puntos* por ir al partido.
+
+*** Parches de tomar
+*1 punto* por tomar el trago común.
+
+** Resta de puntos
+1. *-1* puntos el que se va primero. Excepción si está manejando y está llevando
+   al primero que se va.
+2. *-1 puntos* el que dice que va y no va.
+3. *-6 puntos* el que arme el parche y no vaya.
+
+** Premio
+75000 pesos.
