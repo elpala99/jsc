@@ -1,14 +1,15 @@
 #+TITLE: Firmeza
 
 | Nombre  | Puntos |
-| Peñuela |      3 |
+| Peñuela |      5 |
+| Maya    |      5 |
+| Chitiva |      5 |
+| JuanSe  |      5 |
 | Palacio |      3 |
-| Maya    |      3 |
-| Chitiva |      3 |
-| JuanSe  |      3 |
 
 * Salidas
 1. 17/10/2020 - Primera salida para la tabla. Todos fueron.
+2. 13/11/2020 - Partido Colombia - Uruguay. Luego un partidito real.
 
 * Reglas
 ** Información básica
