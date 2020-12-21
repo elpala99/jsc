@@ -136,8 +136,9 @@
 %%%%%%%% START DOCUMENT
 \title{Title here}
 
-\author{Juan Sebasti\'an C\'ardenas-Rodríguez \\
-  \scalebox{0.7}{Mathematical Engineering, Universidad EAFIT}}
+\author{Juan Sebasti\'an C\'ardenas-Rodríguez \texorpdfstring{\\}{Enter}
+  \texorpdfstring{\scalebox{0.7}{Mathematical Engineering, Universidad
+      EAFIT}}{Scalebox}}
 
 \begin{document}
 
@@ -177,14 +178,13 @@
 
 \begin{frame}
   \begin{tikzpicture}[overlay, remember picture]
-     \node[anchor=center] at (current page.center) {
-     \Huge{\emph{Thank you!}}};
-\end{tikzpicture}
+    \node[anchor=center] at (current page.center) { \Huge{\emph{Thank you!}}};
+  \end{tikzpicture}
   \begin{minipage}[t][.8\textheight]{\textwidth}
     \vfill
     \begin{center}
-        \scalebox{0.7}{Juan Sebasti\'an C\'ardenas-Rodríguez} \\
-        \scalebox{0.7}{jscardenar@eafit.edu.co} \\
+      \scalebox{0.7}{Juan Sebasti\'an C\'ardenas-Rodríguez} \\
+      \scalebox{0.7}{jscardenar@eafit.edu.co} \\
     \end{center}
   \end{minipage}
 \end{frame}
