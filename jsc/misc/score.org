@@ -53,7 +53,7 @@ Colombia.
 *1 punto* por tomar el trago común.
 
 ** Resta de puntos
-1. *-1* puntos el que se va primero. Excepción si está manejando y está llevando
+1. *-1 puntos* el que se va primero. Excepción si está manejando y está llevando
    al primero que se va.
 2. *-1 puntos* el que dice que va y no va.
 3. *-6 puntos* el que arme el parche y no vaya.
