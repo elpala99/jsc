@@ -1,9 +1,8 @@
 #+TITLE: Firmeza
 
 | Nombre  | Puntos |
-
-| Peñuela |     12 |
-| JuanSe  |     12 |
+| Peñuela |     11 |
+| JuanSe  |     11 |
 | Palacio |      9 |
 | Maya    |      8 |
 | Chitiva |      5 |
