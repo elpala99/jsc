@@ -1,15 +1,20 @@
 #+TITLE: Firmeza
 
 | Nombre  | Puntos |
-| Peñuela |      5 |
-| Maya    |      5 |
+
+| Peñuela |     12 |
+| JuanSe  |     12 |
+| Palacio |      9 |
+| Maya    |      8 |
 | Chitiva |      5 |
-| JuanSe  |      5 |
-| Palacio |      3 |
 
 * Salidas
 1. 17/10/2020 - Primera salida para la tabla. Todos fueron.
-2. 13/11/2020 - Partido Colombia - Uruguay. Luego un partidito real.
+2. 13/11/2020 - Partido Colombia - Uruguay. Luego un partidito real. Todos
+   fueron menos el pala.
+3. 11/12/2020 - Salida a parchar, 10 six packs. Fueron Maya, Peñuela, Palacio y
+   JuanSe.
+4. 13/12/2020 - Salida a parchar. Fueron Palacio, Peñuela y JuanSe.
 
 * Reglas
 ** Información básica
