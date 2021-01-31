@@ -1,11 +1,11 @@
 #+TITLE: Firmeza
 
 | Nombre  | Puntos |
-| Peñuela |     11 |
-| JuanSe  |     11 |
-| Palacio |      9 |
-| Maya    |      8 |
-| Chitiva |      5 |
+| Peñuela |     17 |
+| Palacio |     15 |
+| Maya    |     14 |
+|JuanSe   |     13 |
+| Chitiva |      11|
 
 * Salidas
 1. 17/10/2020 - Primera salida para la tabla. Todos fueron.
@@ -14,7 +14,8 @@
 3. 11/12/2020 - Salida a parchar, 10 six packs. Fueron Maya, Peñuela, Palacio y
    JuanSe.
 4. 13/12/2020 - Salida a parchar. Fueron Palacio, Peñuela y JuanSe.
-
+5. 30/12/2020- Salida casa de maya. Fueron palacio, Peñuela, maya y chitiva
+6. 30/01/2021- Salida fugitivo. Fueron palacio, Peñuela, chitiva, maya y juanse puntos adicionales por tomar 
 * Reglas
 ** Información básica
 *Fecha*: 17 de Octubre.
